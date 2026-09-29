@@ -844,11 +844,12 @@
     <!-- PayPal SDK Integration Script with safe error handling -->
     <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
     <script>
-        
         // -----------------------------------------
         // Site configuration
         // -----------------------------------------
-        const CONTACT_EMAIL = 'smartinvestsi254@gmail.com';
+        // IMPORTANT: Replace this with the real business/contact email.
+        // Example: const CONTACT_EMAIL = 'hello@yourdomain.com';
+        const CONTACT_EMAIL = 'YOUR_EMAIL@example.com';
 
         // -----------------------------------------
         // Initialize Lucide icons safely
@@ -864,70 +865,40 @@
         // -----------------------------------------
         // PayPal Donate SDK
         // -----------------------------------------
-        <script
-            src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
-            charset="UTF-8">
-        </script>
-
-        <!-- PayPal donation button -->
-        <div
-            id="paypal-donate-button-container"
-            class="min-h-[52px] flex items-center justify-center">
-        </div>
-        
-        <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const paypalContainer =
-                document.getElementById("paypal-donate-button-container");
-        
+            const paypalContainer = document.getElementById("paypal-donate-button-container");
+
             try {
-                if (
-                    paypalContainer &&
-                    window.PayPal &&
-                    PayPal.Donation &&
-                    PayPal.Donation.Button
-                ) {
+                if (paypalContainer && window.PayPal && PayPal.Donation && PayPal.Donation.Button) {
                     PayPal.Donation.Button({
                         env: "production",
                         hosted_button_id: "26SLEPXAKRGSE",
-        
                         image: {
                             src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
                             title: "PayPal - The safer, easier way to pay online!",
                             alt: "Donate with PayPal"
                         },
-        
                         onComplete: function (params) {
-                            const thankyouEl =
-                                document.getElementById("paypal-thankyou");
-        
+                            const thankyouEl = document.getElementById("paypal-thankyou");
                             if (thankyouEl) {
                                 thankyouEl.classList.remove("hidden");
                             }
-        
-                            console.info(
-                                "PayPal donation completed:",
-                                params
-                            );
+                            console.info("PayPal donation completed:", params);
                         }
                     }).render("#paypal-donate-button-container");
-        
                 } else {
                     showPayPalFallback();
                 }
-        
             } catch (err) {
                 console.error("PayPal Donate SDK error:", err);
                 showPayPalFallback();
             }
         });
-        
+
         function showPayPalFallback() {
-            const container =
-                document.getElementById("paypal-donate-button-container");
-        
+            const container = document.getElementById("paypal-donate-button-container");
             if (!container) return;
-        
+
             container.innerHTML = `
                 <a
                     href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE"
@@ -937,24 +908,14 @@
                     aria-label="Donate securely through PayPal"
                 >
                     <span>Donate via PayPal</span>
-                    <i
-                        data-lucide="external-link"
-                        class="w-4 h-4"
-                        aria-hidden="true">
-                    </i>
+                    <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
                 </a>
-        
-                <p class="mt-3 text-xs text-slate-500">
-                    PayPal's secure donation page
-                </p>
+                <p class="mt-3 text-xs text-slate-500">PayPal's secure donation page</p>
             `;
-        
-            if (window.lucide) {
-                lucide.createIcons();
-            }
+
+            if (window.lucide) lucide.createIcons();
         }
-        </script>
-    
+
         // -----------------------------------------
         // Email / Gmail compose
         // -----------------------------------------
