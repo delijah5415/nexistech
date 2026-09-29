@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexisTech Professional Services</title>
+    <meta name="description" content="NexisTech professional digital engineering and consulting services. View our 8ft round hanging ceiling banner design.">
+    <meta name="theme-color" content="#020617">
+    <title>NexisTech Professional Services | 8ft × 2ft Hanging Banner</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configure Tailwind for dark mode support -->
@@ -48,6 +50,147 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
+
+        /* 8ft round x 2ft hanging banner display */
+        .banner-display {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            background: #ffffff;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+        }
+
+        .banner-artwork {
+            position: relative;
+            aspect-ratio: 12.5625 / 1; /* 301.5in x 24in including 0.125in bleed */
+            min-height: 92px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 72% 50%, rgba(59,130,246,.22), transparent 13%),
+                linear-gradient(90deg, #082d66 0%, #0b3b82 24%, #ffffff 37%, #ffffff 67%, #0b3b82 79%, #082d66 100%);
+        }
+
+        .banner-artwork::before,
+        .banner-artwork::after {
+            content: "";
+            position: absolute;
+            top: -30%;
+            width: 18%;
+            height: 160%;
+            transform: skewX(-25deg);
+            pointer-events: none;
+        }
+
+        .banner-artwork::before {
+            left: 18%;
+            background: linear-gradient(90deg, #ff9900 0 28%, #1e63f0 29% 58%, transparent 59%);
+            opacity: .95;
+        }
+
+        .banner-artwork::after {
+            right: 18%;
+            background: linear-gradient(90deg, transparent 0 40%, #1e63f0 41% 68%, #ff9900 69%);
+            opacity: .95;
+        }
+
+        .banner-content {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 2.5%;
+            color: #082d66;
+        }
+
+        .banner-brand {
+            color: #ffffff;
+            font-size: clamp(.8rem, 2.2vw, 2rem);
+            font-weight: 800;
+            letter-spacing: -.04em;
+            white-space: nowrap;
+        }
+
+        .banner-brand .accent { color: #ff9900; }
+
+        .banner-tagline {
+            margin-top: .15rem;
+            color: #ffffff;
+            font-size: clamp(.35rem, .9vw, .8rem);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .banner-center {
+            text-align: center;
+        }
+
+        .banner-center h3 {
+            margin: 0;
+            color: #082d66;
+            font-size: clamp(.7rem, 2.3vw, 2.15rem);
+            line-height: 1.05;
+            font-weight: 800;
+        }
+
+        .banner-center h3 span { color: #ff9900; }
+
+        .banner-center p {
+            margin: .25rem 0 0;
+            color: #102f63;
+            font-size: clamp(.35rem, .9vw, .85rem);
+            font-weight: 600;
+            letter-spacing: .08em;
+        }
+
+        .banner-features {
+            justify-self: end;
+            color: #ffffff;
+            font-size: clamp(.32rem, .8vw, .75rem);
+            line-height: 1.55;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .banner-features div::before {
+            content: "✓";
+            color: #ffcc33;
+            margin-right: .35rem;
+        }
+
+        .banner-spec {
+            margin-top: .75rem;
+            text-align: center;
+            color: #94a3b8;
+            font-size: .72rem;
+        }
+
+        .banner-note {
+            margin-top: 1rem;
+            padding: .75rem 1rem;
+            border-radius: .75rem;
+            border: 1px solid rgba(59,130,246,.2);
+            background: rgba(15,23,42,.65);
+            color: #94a3b8;
+            font-size: .78rem;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .banner-display { border-radius: 1rem; }
+            .banner-artwork { min-height: 70px; }
+            .banner-content { padding: 0 2%; gap: .25rem; }
+            .banner-features { display: none; }
+            .banner-content { grid-template-columns: 30% 70%; }
+            .banner-center { text-align: right; }
+            .banner-center h3 { font-size: clamp(.62rem, 4vw, 1.05rem); }
+            .banner-brand { font-size: clamp(.62rem, 3.8vw, 1rem); }
+            .banner-tagline { font-size: .28rem; }
+        }
+
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
@@ -69,7 +212,12 @@
                 <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
                 <a href="#testimonials" class="hover:text-blue-400 transition-colors">Testimonials</a>
                 <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
-                <a href="#support" class="hover:text-blue-400 transition-colors">Support Us</a>
+                <a href="#banner" class="hover:text-blue-400 transition-colors">Banner</a>
+                <button type="button" onclick="openEmailCompose('general')" class="hidden lg:inline-flex items-center space-x-2 text-slate-300 hover:text-blue-400 transition-colors" aria-label="Email NexisTech">
+                    <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                    <span>Email Us</span>
+                </button>
+                                <a href="#support" class="hover:text-blue-400 transition-colors">Support Us</a>
             </nav>
 
             <div class="flex items-center space-x-4">
@@ -78,12 +226,63 @@
                     <span>Discord</span>
                 </a>
                 <a href="#support" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold transition-all shadow-lg shadow-blue-600/30">
-                    <i data-lucide="heart" class="w-4 h-4 text-pink-300 fill-pink-300"></i>
+                    <i data-lucide="heart" class="w-4 h-4 text-pink-300 fill-pink-300" aria-hidden="true"></i>
                     <span>Donate</span>
                 </a>
             </div>
         </div>
     </header>
+
+
+    <!-- 8ft Round x 2ft Hanging Ceiling Banner -->
+    <section id="banner" class="py-16 bg-slate-950 border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-medium mb-4">
+                    <i data-lucide="layout-template" class="w-3.5 h-3.5"></i>
+                    <span>8ft Round × 2ft High Hanging Banner</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">NexisTech Display Banner</h2>
+                <p class="mt-3 text-slate-400">
+                    Responsive website preview of the print artwork. The physical banner is 8 ft in diameter × 2 ft high;
+                    the flat artwork follows the circular circumference.
+                </p>
+            </div>
+
+            <div class="banner-display">
+                <div class="banner-artwork" role="img" aria-label="NexisTech 8-foot round hanging ceiling banner artwork preview">
+                    <div class="banner-content">
+                        <div>
+                            <div class="banner-brand">Nex<span class="accent">Exchange</span></div>
+                            <div class="banner-tagline">Trade • Swap • Grow</div>
+                        </div>
+
+                        <div class="banner-center">
+                            <h3>Your Global <span>Crypto</span> Exchange</h3>
+                            <p>Secure &nbsp;|&nbsp; Fast &nbsp;|&nbsp; Reliable</p>
+                        </div>
+
+                        <div class="banner-features">
+                            <div>Buy &amp; Sell Crypto</div>
+                            <div>Top-Level Security</div>
+                            <div>Low Fees</div>
+                            <div>Global Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="banner-spec">
+                Print reference: 25.13 ft × 2 ft artwork area (301.5 in × 24 in), based on an 8 ft diameter circular banner.
+            </p>
+
+            <div class="banner-note">
+                <strong class="text-slate-200">Production note:</strong>
+                This is a responsive website preview, not the final print file. For manufacturing, use the printer's exact template,
+                bleed, color profile, and safe-area requirements.
+            </div>
+        </div>
+    </section>
 
     <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950/0 to-slate-950/0 pointer-events-none"></div>
@@ -107,6 +306,10 @@
                     <i data-lucide="calculator" class="w-4 h-4 text-blue-400"></i>
                     <span>Project Cost Estimator</span>
                 </a>
+                <button type="button" onclick="openEmailCompose('quote')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-semibold transition-all flex items-center justify-center space-x-2">
+                    <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                    <span>Email Us</span>
+                </button>
             </div>
 
             <!-- Stats Bar -->
@@ -463,7 +666,7 @@
                     <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
                 </summary>
                 <p class="mt-4 text-slate-400 text-sm leading-relaxed">
-                    You can instantly join our active Discord community at <a href="https://discord.gg/vXpA3cS95" target="_blank" class="text-blue-400 hover:underline">discord.gg/vXpA3cS95</a> to chat with our engineering team in real-time.
+                    You can instantly join our active Discord community at <a href="https://discord.gg/vXpA3cS95" target="_blank" class="text-blue-400 hover:underline" rel="noopener noreferrer">discord.gg/vXpA3cS95</a> to chat with our engineering team in real-time.
                 </p>
             </details>
         </div>
@@ -492,7 +695,7 @@
                         
                         <!-- PayPal Container -->
                         <div class="mt-8 flex justify-center">
-                            <div id='paypal-container-26SLEPXAKRGSE'></div>
+                            <div id="paypal-donate-button-container" class="min-h-[52px] flex items-center justify-center"></div>
                         </div>
 
                         <!-- Thank You Display Message (hidden by default, revealed on interaction/donation) -->
@@ -502,6 +705,32 @@
                     </div>
                     <div class="mt-8 pt-6 border-t border-slate-800/80 text-xs text-slate-500">
                         Processed securely by PayPal
+                    </div>
+                </div>
+
+                <!-- Email Requests Card -->
+                <div class="p-8 rounded-3xl bg-slate-900/80 border border-blue-500/20 flex flex-col justify-between text-center">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mx-auto mb-6">
+                            <i data-lucide="mail" class="w-7 h-7" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Email NexisTech</h3>
+                        <p class="mt-2 text-slate-400 text-sm">Send a project request, quote request, support question, service inquiry, or partnership message.</p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-1 gap-3">
+                        <button type="button" onclick="openEmailCompose('quote')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="file-text" class="w-4 h-4" aria-hidden="true"></i>
+                            <span>Request a Quote</span>
+                        </button>
+                        <button type="button" onclick="openEmailCompose('general')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                            <span>Send an Email</span>
+                        </button>
+                        <button type="button" onclick="openGmailCompose('support')" class="w-full py-3 rounded-xl border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white font-medium transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
+                            <span>Open Gmail</span>
+                        </button>
                     </div>
                 </div>
 
@@ -532,7 +761,7 @@
                         <p class="mt-2 text-slate-400 text-sm">Join our membership tiers for exclusive perks, code reviews, and community access.</p>
                     </div>
                     <div class="mt-8">
-                        <a href="http://ko-fi.com/mdelijah/tiers" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold transition-all shadow-lg shadow-rose-600/20 flex items-center justify-center space-x-2">
+                        <a href="https://ko-fi.com/mdelijah/tiers" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-semibold transition-all shadow-lg shadow-rose-600/20 flex items-center justify-center space-x-2">
                             <span>Explore Tiers</span>
                             <i data-lucide="external-link" class="w-4 h-4"></i>
                         </a>
@@ -549,16 +778,20 @@
                 <span class="text-white font-semibold">NexisTech Professional Services</span>
             </div>
             
-            <div class="flex items-center space-x-6 text-sm text-slate-400">
-                <a href="https://discord.gg/vXpA3cS95" target="_blank" class="hover:text-blue-400 transition-colors flex items-center space-x-1">
+            <div class="flex items-center space-x-6 text-sm text-slate-400 flex-wrap justify-center">
+                <button type="button" onclick="openEmailCompose('general')" class="hover:text-blue-400 transition-colors flex items-center space-x-1">
+                    <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
+                    <span>Email Us</span>
+                </button>
+                <a href="https://discord.gg/vXpA3cS95" target="_blank" class="hover:text-blue-400 transition-colors flex items-center space-x-1" rel="noopener noreferrer">
                     <i data-lucide="message-square" class="w-4 h-4"></i>
                     <span>Discord Server</span>
                 </a>
-                <a href="https://buymeacoffee.com/mdelijah" target="_blank" class="hover:text-amber-400 transition-colors flex items-center space-x-1">
+                <a href="https://buymeacoffee.com/mdelijah" target="_blank" class="hover:text-amber-400 transition-colors flex items-center space-x-1" rel="noopener noreferrer">
                     <i data-lucide="coffee" class="w-4 h-4"></i>
                     <span>Buy Me a Coffee</span>
                 </a>
-                <a href="http://ko-fi.com/mdelijah/tiers" target="_blank" class="hover:text-rose-400 transition-colors flex items-center space-x-1">
+                <a href="https://ko-fi.com/mdelijah/tiers" target="_blank" class="hover:text-rose-400 transition-colors flex items-center space-x-1" rel="noopener noreferrer">
                     <i data-lucide="heart" class="w-4 h-4"></i>
                     <span>Ko-fi Tiers</span>
                 </a>
@@ -571,7 +804,7 @@
     </footer>
 
     <!-- Ko-fi Floating Widget Button -->
-    <a href="http://ko-fi.com/mdelijah/tiers" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-rose-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group" title="Support on Ko-fi">
+    <a href="https://ko-fi.com/mdelijah/tiers" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-rose-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group" title="Support on Ko-fi">
         <i data-lucide="heart" class="w-6 h-6 fill-white"></i>
         <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 font-semibold text-sm">Support Us</span>
     </a>
@@ -583,7 +816,7 @@
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
             <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
-                <i data-lucide="cpu" class="w-6 h-6"></i>
+                <i data-lucide="cpu" class="w-6 h-6" aria-hidden="true"></i>
             </div>
             <h3 id="modal-title" class="text-2xl font-bold text-white">Service Title</h3>
             <p id="modal-desc" class="mt-4 text-slate-300 text-sm leading-relaxed">Service description goes here...</p>
@@ -609,9 +842,18 @@
     </div>
 
     <!-- PayPal SDK Integration Script with safe error handling -->
-    <script src='https://www.paypal.com/sdk/js?client-id=BAAQePvJch8VJquVFOuHvsq9vi5aGRmqVvSeqjnhcnLFjrOIZ4G2dOwmBPAdNs-MdzhLGHSdqoJ7dY_gwo&components=hosted-buttons&disable-funding=venmo&currency=USD'></script>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
     <script>
+        // -----------------------------------------
+        // Site configuration
+        // -----------------------------------------
+        // IMPORTANT: Replace this with the real business/contact email.
+        // Example: const CONTACT_EMAIL = 'hello@yourdomain.com';
+        const CONTACT_EMAIL = 'YOUR_EMAIL@example.com';
+
+        // -----------------------------------------
         // Initialize Lucide icons safely
+        // -----------------------------------------
         try {
             if (window.lucide) {
                 lucide.createIcons();
@@ -620,49 +862,121 @@
             console.error("Lucide init error:", err);
         }
 
-        // Render PayPal Hosted Button with robust error catching
-        document.addEventListener("DOMContentLoaded", function() {
+        // -----------------------------------------
+        // PayPal Donate SDK
+        // -----------------------------------------
+        document.addEventListener("DOMContentLoaded", function () {
+            const paypalContainer = document.getElementById("paypal-donate-button-container");
+
             try {
-                if (window.paypal && paypal.HostedButtons) {
-                    paypal.HostedButtons({
-                        hostedButtonId: '26SLEPXAKRGSE',
-                        onApprove: function(data, actions) {
-                            const thankyouEl = document.getElementById('paypal-thankyou');
-                            if (thankyouEl) {
-                                thankyouEl.classList.remove('hidden');
-                            }
+                if (paypalContainer && window.PayPal && PayPal.Donation && PayPal.Donation.Button) {
+                    PayPal.Donation.Button({
+                        env: "production",
+                        hosted_button_id: "26SLEPXAKRGSE",
+                        image: {
+                            src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
+                            title: "PayPal - The safer, easier way to pay online!",
+                            alt: "Donate with PayPal"
                         },
-                        onError: function(err) {
-                            console.warn("PayPal HostedButtons error encountered, displaying graceful fallback.", err);
-                            const container = document.getElementById('paypal-container-26SLEPXAKRGSE');
-                            if (container) {
-                                container.innerHTML = '<a href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold inline-flex items-center space-x-2 transition-colors"><span>Donate via PayPal</span><i data-lucide="external-link" class="w-4 h-4"></i></a>';
-                                if (window.lucide) lucide.createIcons();
+                        onComplete: function (params) {
+                            const thankyouEl = document.getElementById("paypal-thankyou");
+                            if (thankyouEl) {
+                                thankyouEl.classList.remove("hidden");
                             }
+                            console.info("PayPal donation completed:", params);
                         }
-                    }).render('#paypal-container-26SLEPXAKRGSE').catch(function(renderErr) {
-                        console.warn("PayPal render caught:", renderErr);
-                        const container = document.getElementById('paypal-container-26SLEPXAKRGSE');
-                        if (container) {
-                            container.innerHTML = '<a href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold inline-flex items-center space-x-2 transition-colors"><span>Donate via PayPal</span></a>';
-                        }
-                    });
+                    }).render("#paypal-donate-button-container");
                 } else {
-                    const container = document.getElementById('paypal-container-26SLEPXAKRGSE');
-                    if (container) {
-                        container.innerHTML = '<a href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold inline-flex items-center space-x-2 transition-colors"><span>Donate via PayPal</span></a>';
-                    }
+                    showPayPalFallback();
                 }
-            } catch(e) {
-                console.error("PayPal integration exception caught:", e);
-                const container = document.getElementById('paypal-container-26SLEPXAKRGSE');
-                if (container) {
-                    container.innerHTML = '<a href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold inline-flex items-center space-x-2 transition-colors"><span>Donate via PayPal</span></a>';
-                }
+            } catch (err) {
+                console.error("PayPal Donate SDK error:", err);
+                showPayPalFallback();
             }
         });
 
+        function showPayPalFallback() {
+            const container = document.getElementById("paypal-donate-button-container");
+            if (!container) return;
+
+            container.innerHTML = `
+                <a
+                    href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold inline-flex items-center justify-center space-x-2 transition-colors"
+                    aria-label="Donate securely through PayPal"
+                >
+                    <span>Donate via PayPal</span>
+                    <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
+                </a>
+                <p class="mt-3 text-xs text-slate-500">PayPal's secure donation page</p>
+            `;
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // -----------------------------------------
+        // Email / Gmail compose
+        // -----------------------------------------
+        function openEmailCompose(type = "general") {
+            if (!CONTACT_EMAIL || CONTACT_EMAIL === "YOUR_EMAIL@example.com") {
+                alert("Please set CONTACT_EMAIL in index.html first. Replace YOUR_EMAIL@example.com with the address that should receive website requests.");
+                return;
+            }
+
+            const subjects = {
+                general: "Website Request / General Inquiry",
+                quote: "Project Quote Request",
+                support: "Technical Support Request",
+                service: "Service Inquiry",
+                partnership: "Partnership / Business Inquiry"
+            };
+
+            const bodies = {
+                general:
+                    "Hello NexisTech,%0D%0A%0D%0AI would like to make an inquiry about your services.%0D%0A%0D%0ARequest details:%0D%0A%0D%0AThank you.",
+                quote:
+                    "Hello NexisTech,%0D%0A%0D%0AI would like to request a project quote.%0D%0A%0D%0AProject/service:%0D%0ABudget (optional):%0D%0ATimeline (optional):%0D%0ARequirements:%0D%0A%0D%0AThank you.",
+                support:
+                    "Hello NexisTech,%0D%0A%0D%0AI need technical support.%0D%0A%0D%0AIssue:%0D%0ASite/project:%0D%0ADetails:%0D%0A%0D%0AThank you.",
+                service:
+                    "Hello NexisTech,%0D%0A%0D%0AI am interested in one of your professional services.%0D%0A%0D%0AService:%0D%0ARequirements:%0D%0A%0D%0AThank you.",
+                partnership:
+                    "Hello NexisTech,%0D%0A%0D%0AI would like to discuss a partnership/business opportunity.%0D%0A%0D%0ADetails:%0D%0A%0D%0AThank you."
+            };
+
+            const subject = encodeURIComponent(subjects[type] || subjects.general);
+            const body = bodies[type] || bodies.general;
+            const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+            // mailto is the most reliable way to hand the message to
+            // the user's installed email client, including Gmail on Android.
+            window.location.href = mailtoUrl;
+        }
+
+        // Gmail web compose fallback for users who prefer browser Gmail.
+        function openGmailCompose(type = "general") {
+            if (!CONTACT_EMAIL || CONTACT_EMAIL === "YOUR_EMAIL@example.com") {
+                alert("Please set CONTACT_EMAIL in index.html first.");
+                return;
+            }
+
+            const subjectMap = {
+                general: "Website Request / General Inquiry",
+                quote: "Project Quote Request",
+                support: "Technical Support Request",
+                service: "Service Inquiry",
+                partnership: "Partnership / Business Inquiry"
+            };
+
+            const subject = encodeURIComponent(subjectMap[type] || subjectMap.general);
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}&su=${subject}`;
+            window.open(gmailUrl, "_blank", "noopener,noreferrer");
+        }
+
         // Interactive Cost Estimator Logic
+
         function calculateEstimate() {
             try {
                 const serviceBase = parseInt(document.getElementById('calc-service').value) || 2500;
