@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexisTech | Professional Services & Community Support</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="mesh-bg"></div>
+
+  <!-- Navigation -->
+  <navbar>
+    <a href="#" class="logo">NexisTech</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#support">Support & Donate</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#support" class="btn-primary">Get Started</a></li>
+    </ul>
+  </navbar>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Next-Generation Digital Solutions & <span>Expert Services</span></h1>
+    <p>Empowering creators, startups, and enterprises with premium scalable infrastructure, modern development, and dedicated community backing.</p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="https://discord.gg/vXpA3cS95" target="_blank" class="discord-btn">Join Discord Server</a>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 class="section-title">Our Core <span>Services</span></h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Cloud Architecture</h3>
+        <p>Enterprise-grade server deployment, load balancing, and high-availability cloud configurations tailored for peak performance.</p>
+        <a href="#support" class="btn-primary">Request Service</a>
+      </div>
+      <div class="card">
+        <h3>Full-Stack Development</h3>
+        <p>Custom modern web apps, high-speed APIs, and gorgeous responsive user interfaces built with cutting-edge tech stacks.</p>
+        <a href="#support" class="btn-primary">Request Service</a>
+      </div>
+      <div class="card">
+        <h3>Security Auditing</h3>
+        <p>Comprehensive vulnerability scans, penetration testing, and robust hardening procedures to keep your digital assets secure.</p>
+        <a href="#support" class="btn-primary">Request Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support & Donation Section (PayPal, Ko-fi, Buy Me a Coffee) -->
+  <section id="support">
+    <h2 class="section-title">Support Our Work & <span>Donate</span></h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      All contributions directly fund our open-source tools, server uptime, and community growth. Choose your preferred way to support us below!
+    </p>
+
+    <div class="support-grid">
+      <!-- PayPal Hosted Button Card -->
+      <div class="support-box">
+        <h3>PayPal Donation</h3>
+        <p>Support securely via credit card or your PayPal account.</p>
+        
+        <!-- Exact PayPal Container & Script Integration -->
+        <div id="paypal-container-26SLEPXAKRGSE" style="margin: 1.5rem 0;"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAAQePvJch8VJquVFOuHvsq9vi5aGRmqVvSeqjnhcnLFjrOIZ4G2dOwmBPAdNs-MdzhLGHSdqoJ7dY_gwo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "26SLEPXAKRGSE",
+          }).render("#paypal-container-26SLEPXAKRGSE");
+        </script>
+      </div>
+
+      <!-- Buy Me a Coffee & Ko-fi Tiers Card -->
+      <div class="support-box">
+        <h3>Buy Me a Coffee & Ko-fi</h3>
+        <p>Prefer small recurring contributions or buying a coffee? Check out our support links below.</p>
+        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+          <a href="https://buymeacoffee.com/mdelijah" target="_blank" class="bmc-btn">☕ Buy Me a Coffee</a>
+          <a href="http://ko-fi.com/mdelijah/tiers" target="_blank" class="btn-primary" style="background: #00b9fe;">✨ View Ko-fi Tiers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Discord Section -->
+  <section id="community">
+    <div class="support-box" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h3 style="font-size: 2rem; margin-bottom: 1rem;">Join Our Discord Community</h3>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">
+        Connect with like-minded developers, get direct support, stay updated with our latest releases, and chat with our active members.
+      </p>
+      <a href="https://discord.gg/vXpA3cS95" target="_blank" class="discord-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
+        🚀 Join Discord Server (vXpA3cS95)
+      </a>
+    </div>
+  </section>
+
+  <!-- Ko-fi Floating Chat Overlay Widget -->
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script>
+    kofiWidgetOverlay.draw('mdelijah', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support me',
+      'floating-chat.donateButton.background-color': '#00b9fe',
+      'floating-chat.donateButton.text-color': '#fff'
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 NexisTech. All rights reserved. Built for high performance & community collaboration.</p>
+  </footer>
+
+</body>
+</html>
