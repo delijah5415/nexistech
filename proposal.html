@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NexisTech project proposal request form.">
+<meta name="theme-color" content="#020617"><title>Request a Proposal | NexisTech</title>
+<script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<header class="border-b border-slate-800 bg-slate-950/95"><div class="max-w-5xl mx-auto px-4 py-5 flex items-center justify-between"><a href="index.html" class="font-bold text-xl text-white">NexisTech</a><a href="index.html" class="text-sm text-blue-400 hover:text-blue-300">Back to website</a></div></header>
+<main class="max-w-4xl mx-auto px-4 py-14">
+<div class="text-center mb-10"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs">Proposal Request</div><h1 class="mt-4 text-4xl font-bold">Request a Project Proposal</h1><p class="mt-3 text-slate-400">Tell NexisTech what you need. This request does not create a binding contract or transfer ownership of any website asset.</p></div>
+<form id="proposal-form" class="rounded-3xl bg-slate-900/80 border border-slate-800 p-6 sm:p-8 space-y-6">
+<div class="grid sm:grid-cols-2 gap-5"><label class="block"><span class="text-sm text-slate-300">Name *</span><input required id="name" class="mt-2 w-full rounded-xl bg-slate-950 border border-slate-700 px-4 py-3" placeholder="Your name"></label><label class="block"><span class="text-sm text-slate-300">Email *</span><input required type="email" id="email" class="mt-2 w-full rounded-xl bg-slate-950 border border-slate-700 px-4 py-3" placeholder="you@example.com"></label></div>
+<div class="grid sm:grid-cols-2 gap-5"><label class="block"><span class="text-sm text-slate-300">Service</span><select id="service" class="mt-2 w-full rounded-xl bg-slate-950 border border-slate-700 px-4 py-3"><option>Cloud Infrastructure & DevOps</option><option>AI & Machine Learning</option><option>Cybersecurity & Auditing</option><option>Full-Stack Web & App Engineering</option><option>Database Architecture</option><option>Technical Advisory / CTO Consulting</option><option>Other</option></select></label><label class="block"><span class="text-sm text-slate-300">Estimated budget</span><input id="budget" class="mt-2 w-full rounded-xl bg-slate-950 border border-slate-700 px-4 py-3" placeholder="Optional"></label></div>
+<label class="block"><span class="text-sm text-slate-300">Project requirements *</span><textarea required id="requirements" rows="7" class="mt-2 w-full rounded-xl bg-slate-950 border border-slate-700 px-4 py-3" placeholder="Describe the project, features, timeline, integrations, and goals."></textarea></label>
+<label class="flex items-start gap-3 text-sm text-slate-400"><input required type="checkbox" class="mt-1" id="terms"><span>I have read and accept the <a href="terms.html" class="text-blue-400 hover:text-blue-300">Terms & Conditions</a>. I understand that this request is not a contract and that payments are non-refundable except where required by applicable law.</span></label>
+<div class="flex flex-col sm:flex-row gap-3"><button class="flex-1 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 font-semibold" type="submit">Open Email Proposal Request</button><a class="flex-1 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-center" href="https://discord.gg/vXpA3cS95" target="_blank" rel="noopener noreferrer">Continue on Discord</a></div>
+<p id="status" class="hidden rounded-xl p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm"></p>
+</form>
+</main>
+<script>
+lucide.createIcons();
+document.getElementById('proposal-form').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),service=document.getElementById('service').value,budget=document.getElementById('budget').value.trim(),requirements=document.getElementById('requirements').value.trim();const subject=encodeURIComponent('NexisTech Proposal Request - '+service);const body=encodeURIComponent('Hello NexisTech,\n\nName: '+name+'\nEmail: '+email+'\nService: '+service+'\nBudget: '+budget+'\n\nProject requirements:\n'+requirements+'\n\nI have read and accepted the Terms & Conditions.');const url='mailto:smartinvestsi254@gmail.com?subject='+subject+'&body='+body;window.location.href=url;const status=document.getElementById('status');status.textContent='Your email application has been prepared. If your email app did not open, contact smartinvestsi254@gmail.com or use Discord.';status.classList.remove('hidden');});
+</script></body></html>
