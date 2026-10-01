@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,19 +11,32 @@
 
     <meta
         name="description"
-        content="NexisTech Professional Services — digital solutions, cloud infrastructure, cybersecurity, AI, web development, database optimization and technical advisory."
+        content="NexisTech Professional Services — Cloud infrastructure, AI and ML, cybersecurity, full-stack development, database optimization, and technical advisory."
     >
 
     <meta
         name="keywords"
-        content="NexisTech, technology services, cloud infrastructure, cybersecurity, AI, web development, database optimization, technical advisory, NexExchange"
+        content="NexisTech, technology services, cloud infrastructure, DevOps, AI, machine learning, cybersecurity, web development, database optimization, CTO consulting"
     >
 
-    <meta name="author" content="NexisTech Professional Services">
+    <meta
+        name="author"
+        content="NexisTech Professional Services"
+    >
 
     <meta
         name="robots"
         content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://nexistech-beta.vercel.app/"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
     >
 
     <meta
@@ -32,47 +46,28 @@
 
     <meta
         property="og:description"
-        content="Professional digital solutions, engineering, cybersecurity and technical advisory."
+        content="Professional technology services for modern businesses."
     >
 
     <meta
-        property="og:type"
-        content="website"
+        property="og:url"
+        content="https://nexistech-beta.vercel.app/"
+    >
+
+    <meta
+        name="theme-color"
+        content="#020617"
     >
 
     <title>
-        NexisTech Professional Services | Digital Solutions
+        NexisTech Professional Services
     </title>
 
-    <link 
-        rel="canonical" href="https://nexistech-beta.vercel.app.com/"
-    >
-
-    <!-- =========================================================
-         TAILWIND CSS
-    ========================================================== -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- =========================================================
-         LUCIDE ICONS
-    ========================================================== -->
-    <script
-        src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"
-        defer
-    ></script>
-
-    <!-- =========================================================
-         PAYPAL DONATE SDK
-         Loaded ONCE only.
-    ========================================================== -->
-    <script
-        src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
-        charset="UTF-8"
-    ></script>
 
     <!-- =========================================================
          FONTS
     ========================================================== -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -89,7 +84,69 @@
         rel="stylesheet"
     >
 
+
+    <!-- =========================================================
+         TAILWIND
+    ========================================================== -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- =========================================================
+         LUCIDE ICONS
+    ========================================================== -->
+
+    <script
+        src="https://unpkg.com/lucide@latest"
+    ></script>
+
+
+    <!-- =========================================================
+         PAYPAL DONATE SDK
+         LOAD ONCE ONLY
+    ========================================================== -->
+
+    <script
+        src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+        charset="UTF-8"
+    ></script>
+
+
+    <!-- =========================================================
+         SITE CONFIGURATION
+    ========================================================== -->
+
+    <script>
+        window.SITE_CONFIG = {
+            siteName: "NexisTech Professional Services",
+
+            contactEmail:
+                "smartinvestsi254@gmail.com",
+
+            paypalHostedButtonId:
+                "26SLEPXAKRGSE",
+
+            paypalDonationUrl:
+                "https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE",
+
+            buyMeACoffeeUrl:
+                "https://buymeacoffee.com/mdelijah",
+
+            kofiUrl:
+                "https://ko-fi.com/mdelijah/tiers",
+
+            siteUrl:
+                "https://nexistech-beta.vercel.app/"
+        };
+    </script>
+
+
+    <!-- =========================================================
+         CUSTOM CSS
+    ========================================================== -->
+
     <style>
+
         html {
             scroll-behavior: smooth;
         }
@@ -98,8 +155,13 @@
             font-family: "Inter", sans-serif;
             background:
                 radial-gradient(
+                    circle at top left,
+                    rgba(37, 99, 235, 0.15),
+                    transparent 35%
+                ),
+                radial-gradient(
                     circle at top right,
-                    rgba(6, 182, 212, 0.08),
+                    rgba(124, 58, 237, 0.12),
                     transparent 30%
                 ),
                 #020617;
@@ -107,378 +169,319 @@
         }
 
         .glass {
-            background: rgba(15, 23, 42, 0.72);
+            background: rgba(15, 23, 42, 0.68);
             border: 1px solid rgba(148, 163, 184, 0.12);
-            backdrop-filter: blur(14px);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(
+                    rgba(148, 163, 184, 0.045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(148, 163, 184, 0.045) 1px,
+                    transparent 1px
+                );
+            background-size: 40px 40px;
         }
 
         .gradient-text {
             background: linear-gradient(
                 90deg,
-                #67e8f9,
-                #22d3ee,
-                #a78bfa
+                #60a5fa,
+                #a78bfa,
+                #22d3ee
             );
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .hero-grid {
-            background-image:
-                linear-gradient(
-                    rgba(34, 211, 238, 0.05) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(34, 211, 238, 0.05) 1px,
-                    transparent 1px
-                );
-            background-size: 48px 48px;
+        .service-card {
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .glow {
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(96, 165, 250, 0.35);
             box-shadow:
-                0 0 30px rgba(34, 211, 238, 0.12),
-                0 0 70px rgba(124, 58, 237, 0.08);
+                0 20px 50px rgba(0, 0, 0, 0.25);
         }
 
         .modal-backdrop {
             background: rgba(2, 6, 23, 0.82);
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
-        .faq-content {
-            display: none;
+        .hidden {
+            display: none !important;
         }
 
-        .faq-item.open .faq-content {
-            display: block;
+        #mobile-menu {
+            transition:
+                max-height 0.25s ease,
+                opacity 0.25s ease;
         }
 
-        .faq-item.open .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-icon {
-            transition: transform 0.2s ease;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        .mobile-menu.open {
-            display: block;
-        }
-
-        input,
-        textarea,
-        select {
-            outline: none;
-        }
-
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: rgba(34, 211, 238, 0.7) !important;
-            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.08);
-        }
-
-        .estimate-number {
-            font-variant-numeric: tabular-nums;
-        }
-
-        .banner-preview {
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(34, 211, 238, 0.12),
-                    transparent 55%
-                ),
-                linear-gradient(
-                    135deg,
-                    #0f172a,
-                    #020617
-                );
+        .faq-answer {
+            transition:
+                max-height 0.3s ease,
+                opacity 0.25s ease;
         }
 
         .terms-content {
-            display: none;
+            transition:
+                max-height 0.35s ease,
+                opacity 0.25s ease;
         }
 
-        .terms-content.open {
-            display: block;
+        .paypal-button-wrapper {
+            min-height: 55px;
         }
 
-        @media (max-width: 768px) {
-            .hero-grid {
-                background-size: 32px 32px;
-            }
+        ::selection {
+            background: rgba(59, 130, 246, 0.35);
+            color: white;
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- ============================================================
-     SITE CONFIGURATION
-============================================================= -->
-<script>
-    /*
-     * Central configuration.
-     * Keep these values in one place.
-     */
-
-    window.SITE_CONFIG = {
-        siteName: "NexisTech Professional Services",
-
-        contactEmail: "smartinvestsi@gmail.com",
-
-        paypalHostedButtonId: "26SLEPXAKRGSE",
-
-        paypalDonationUrl:
-            "https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE",
-
-        buyMeACoffeeUrl:
-            "https://buymeacoffee.com/mdelijah",
-
-        kofiUrl:
-            "https://ko-fi.com/mdelijah/tiers"
-    };
-</script>
-
-
-<!-- ============================================================
+<!-- =========================================================
      NAVIGATION
-============================================================= -->
+========================================================== -->
+
 <header
-    class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl"
+    class="fixed top-0 z-50 w-full border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-xl"
 >
 
-    <div
+    <nav
         class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Main navigation"
     >
 
-        <!-- LOGO -->
         <a
             href="#home"
             class="flex items-center gap-3"
-            aria-label="NexisTech home"
         >
 
             <div
-                class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 ring-1 ring-cyan-400/20"
+                class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 ring-1 ring-blue-400/20"
             >
                 <i
                     data-lucide="cpu"
-                    class="h-5 w-5 text-cyan-300"
+                    class="h-5 w-5 text-blue-300"
                 ></i>
             </div>
 
             <div>
-                <div class="font-black tracking-tight text-white">
-                    Nexis<span class="text-cyan-400">Tech</span>
+
+                <div
+                    class="font-black tracking-tight text-white"
+                >
+                    NexisTech
                 </div>
 
-                <div class="text-[10px] uppercase tracking-[0.22em] text-slate-500">
+                <div
+                    class="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500"
+                >
                     Professional Services
                 </div>
+
             </div>
 
         </a>
 
 
-        <!-- DESKTOP NAV -->
-        <nav
-            class="hidden items-center gap-6 md:flex"
-            aria-label="Main navigation"
-        >
+        <div class="hidden items-center gap-7 md:flex">
 
             <a
                 href="#services"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
+                class="text-sm font-semibold text-slate-300 transition hover:text-white"
             >
                 Services
             </a>
 
             <a
                 href="#estimator"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
+                class="text-sm font-semibold text-slate-300 transition hover:text-white"
             >
                 Estimator
             </a>
 
             <a
                 href="#about"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
+                class="text-sm font-semibold text-slate-300 transition hover:text-white"
             >
                 About
             </a>
 
             <a
                 href="#faq"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
+                class="text-sm font-semibold text-slate-300 transition hover:text-white"
             >
                 FAQ
             </a>
 
             <a
-                href="#banner"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
-            >
-                Banner
-            </a>
-
-            <a
                 href="#support"
-                class="text-sm font-medium text-slate-300 transition hover:text-cyan-300"
+                class="text-sm font-semibold text-slate-300 transition hover:text-white"
             >
                 Support
             </a>
 
             <a
                 href="#contact"
-                class="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-cyan-400"
+                class="rounded-xl bg-blue-500 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-blue-400"
             >
                 Contact
             </a>
 
-        </nav>
+        </div>
 
 
-        <!-- MOBILE BUTTON -->
         <button
             id="mobile-menu-button"
             type="button"
-            class="rounded-lg border border-slate-700 p-2 text-slate-300 md:hidden"
+            class="rounded-xl border border-slate-800 p-2 text-slate-300 md:hidden"
             aria-label="Open navigation menu"
             aria-expanded="false"
         >
+
             <i
                 data-lucide="menu"
                 class="h-5 w-5"
             ></i>
+
         </button>
 
-    </div>
+    </nav>
 
 
-    <!-- MOBILE NAV -->
+    <!-- MOBILE MENU -->
+
     <div
         id="mobile-menu"
-        class="mobile-menu border-t border-slate-800 bg-slate-950 md:hidden"
+        class="hidden border-t border-slate-800/70 bg-slate-950 md:hidden"
     >
 
-        <nav
-            class="mx-auto max-w-7xl px-4 py-4"
-            aria-label="Mobile navigation"
-        >
+        <div class="mx-auto flex max-w-7xl flex-col px-4 py-4">
 
             <a
                 href="#services"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 Services
             </a>
 
             <a
                 href="#estimator"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 Estimator
             </a>
 
             <a
                 href="#about"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 About
             </a>
 
             <a
                 href="#faq"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 FAQ
             </a>
 
             <a
-                href="#banner"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
-            >
-                Banner
-            </a>
-
-            <a
                 href="#support"
-                class="mobile-link block rounded-lg px-3 py-3 text-slate-300 hover:bg-slate-900 hover:text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 Support
             </a>
 
             <a
                 href="#contact"
-                class="mobile-link block rounded-lg px-3 py-3 text-cyan-300"
+                class="mobile-nav-link rounded-lg px-3 py-3 text-sm font-semibold text-slate-300 hover:bg-slate-900 hover:text-white"
             >
                 Contact
             </a>
 
-        </nav>
+        </div>
 
     </div>
 
 </header>
 
 
-<!-- ============================================================
+<main id="home">
+
+
+<!-- =========================================================
      HERO
-============================================================= -->
-<main>
+========================================================== -->
 
 <section
-    id="home"
-    class="hero-grid relative overflow-hidden"
+    class="hero-grid relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32"
 >
 
     <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.12),transparent_45%)]"
+        class="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-slate-950"
     ></div>
 
     <div
-        class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32"
+        class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
     >
 
         <div class="max-w-4xl">
 
             <div
-                class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-cyan-300"
+                class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-400/5 px-4 py-2 text-xs font-bold text-blue-300"
             >
+
                 <span
-                    class="h-2 w-2 rounded-full bg-cyan-400"
+                    class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"
                 ></span>
 
-                Digital Engineering & Professional Services
+                Technology solutions for modern businesses
+
             </div>
 
 
             <h1
-                class="text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
+                class="text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
-                Architecting the
+
+                Build.
                 <span class="gradient-text">
-                    Future of Digital Solutions
+                    Secure.
                 </span>
+                Scale.
+
             </h1>
 
 
             <p
-                class="mt-7 max-w-3xl text-lg leading-8 text-slate-400 sm:text-xl"
+                class="mt-7 max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl"
             >
-                We design, build, secure and optimize digital platforms
-                for businesses that require dependable technology,
-                scalable infrastructure and practical engineering.
+                NexisTech Professional Services delivers practical,
+                scalable technology solutions across cloud infrastructure,
+                AI and machine learning, cybersecurity, full-stack
+                development, databases, and technical advisory.
             </p>
 
 
@@ -488,21 +491,31 @@
 
                 <a
                     href="#estimator"
-                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3.5 font-black text-slate-950 transition hover:bg-cyan-400"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-6 py-3.5 font-black text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-400"
                 >
-                    Start Project Estimate
+
                     <i
-                        data-lucide="arrow-right"
+                        data-lucide="calculator"
                         class="h-5 w-5"
                     ></i>
+
+                    Estimate Your Project
+
                 </a>
 
 
                 <a
                     href="#services"
-                    class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/70 px-6 py-3.5 font-bold text-slate-200 transition hover:border-cyan-400/40 hover:text-cyan-300"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3.5 font-bold text-slate-200 transition hover:border-slate-600 hover:bg-slate-800"
                 >
+
                     Explore Services
+
+                    <i
+                        data-lucide="arrow-down"
+                        class="h-4 w-4"
+                    ></i>
+
                 </a>
 
             </div>
@@ -511,44 +524,60 @@
 
 
         <!-- STATS -->
+
         <div
-            class="mt-20 grid grid-cols-2 gap-4 lg:grid-cols-4"
+            class="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4"
         >
 
             <div class="glass rounded-2xl p-5">
+
                 <div class="text-2xl font-black text-white">
                     99.9%
                 </div>
-                <div class="mt-1 text-sm text-slate-500">
-                    Target Uptime SLA
+
+                <div class="mt-1 text-xs text-slate-500">
+                    Reliability target
                 </div>
+
             </div>
 
+
             <div class="glass rounded-2xl p-5">
+
                 <div class="text-2xl font-black text-white">
                     250+
                 </div>
-                <div class="mt-1 text-sm text-slate-500">
-                    Enterprise Projects
+
+                <div class="mt-1 text-xs text-slate-500">
+                    Project engagements
                 </div>
+
             </div>
 
+
             <div class="glass rounded-2xl p-5">
+
                 <div class="text-2xl font-black text-white">
                     24/7
                 </div>
-                <div class="mt-1 text-sm text-slate-500">
-                    Support Availability
+
+                <div class="mt-1 text-xs text-slate-500">
+                    Technical availability
                 </div>
+
             </div>
 
+
             <div class="glass rounded-2xl p-5">
+
                 <div class="text-2xl font-black text-white">
                     Global
                 </div>
-                <div class="mt-1 text-sm text-slate-500">
-                    Digital Delivery
+
+                <div class="mt-1 text-xs text-slate-500">
+                    Remote delivery
                 </div>
+
             </div>
 
         </div>
@@ -558,20 +587,23 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      SERVICES
-============================================================= -->
+========================================================== -->
+
 <section
     id="services"
     class="border-t border-slate-900 py-24"
 >
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
 
         <div class="max-w-2xl">
 
             <p
-                class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
             >
                 Services
             </p>
@@ -579,12 +611,14 @@
             <h2
                 class="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl"
             >
-                Engineering built around your objectives.
+                Technical expertise for the entire lifecycle.
             </h2>
 
-            <p class="mt-5 leading-7 text-slate-400">
-                From infrastructure and security to applications and
-                databases, our services cover the technology lifecycle.
+            <p
+                class="mt-4 leading-7 text-slate-400"
+            >
+                From architecture and development to security,
+                optimization, and technical strategy.
             </p>
 
         </div>
@@ -595,15 +629,20 @@
         >
 
             <!-- SERVICE 1 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10"
                 >
+
                     <i
                         data-lucide="cloud-cog"
-                        class="h-6 w-6 text-cyan-300"
+                        class="h-6 w-6 text-blue-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -613,34 +652,43 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    Deployment architecture, cloud infrastructure,
-                    CI/CD, monitoring, automation and operational
-                    optimization.
+                    Cloud architecture, deployment automation,
+                    CI/CD pipelines, monitoring, scalability,
+                    and infrastructure optimization.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="Cloud Infrastructure & DevOps"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-300 hover:text-blue-200"
+                    data-service="cloud"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
 
 
             <!-- SERVICE 2 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10"
                 >
+
                     <i
                         data-lucide="brain-circuit"
-                        class="h-6 w-6 text-violet-300"
+                        class="h-6 w-6 text-purple-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -650,33 +698,43 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    AI-enabled workflows, automation, data pipelines,
-                    intelligent applications and model integration.
+                    AI-assisted applications, machine-learning
+                    workflows, automation, data processing,
+                    and intelligent business systems.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="AI & Machine Learning"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-purple-300 hover:text-purple-200"
+                    data-service="ai"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
 
 
             <!-- SERVICE 3 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
                     class="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-500/10"
                 >
+
                     <i
                         data-lucide="shield-check"
                         class="h-6 w-6 text-rose-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -686,33 +744,43 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    Security reviews, application hardening, access
-                    controls, vulnerability assessment and risk reduction.
+                    Security reviews, vulnerability assessment,
+                    application hardening, access controls,
+                    and security architecture.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="Cybersecurity & Auditing"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-rose-300 hover:text-rose-200"
+                    data-service="security"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
 
 
             <!-- SERVICE 4 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10"
                 >
+
                     <i
                         data-lucide="code-2"
-                        class="h-6 w-6 text-emerald-300"
+                        class="h-6 w-6 text-cyan-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -722,33 +790,43 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    Responsive websites, web applications, APIs,
-                    dashboards, authentication and integrations.
+                    Modern responsive websites, web applications,
+                    dashboards, APIs, integrations, and
+                    production deployments.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="Full-Stack Web & App Development"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-cyan-300 hover:text-cyan-200"
+                    data-service="development"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
 
 
             <!-- SERVICE 5 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10"
                 >
+
                     <i
                         data-lucide="database"
-                        class="h-6 w-6 text-amber-300"
+                        class="h-6 w-6 text-emerald-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -758,33 +836,43 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    Schema design, indexing, query optimization,
-                    security policies, backups and data architecture.
+                    Database architecture, query optimization,
+                    indexing, migrations, backups, security,
+                    and performance improvements.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="Database Optimization"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-emerald-300 hover:text-emerald-200"
+                    data-service="database"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
 
 
             <!-- SERVICE 6 -->
-            <article class="glass glow rounded-2xl p-6">
+
+            <article
+                class="service-card glass rounded-3xl p-7"
+            >
 
                 <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10"
                 >
+
                     <i
                         data-lucide="briefcase-business"
-                        class="h-6 w-6 text-blue-300"
+                        class="h-6 w-6 text-amber-300"
                     ></i>
+
                 </div>
 
                 <h3
@@ -794,18 +882,23 @@
                 </h3>
 
                 <p
-                    class="mt-3 leading-7 text-slate-400"
+                    class="mt-3 text-sm leading-6 text-slate-400"
                 >
-                    Architecture reviews, technology strategy,
-                    technical planning and engineering leadership.
+                    Technology strategy, architecture reviews,
+                    technical roadmaps, vendor evaluation,
+                    and engineering leadership.
                 </p>
 
                 <button
                     type="button"
-                    class="service-details mt-5 text-sm font-bold text-cyan-300 hover:text-cyan-200"
-                    data-service="Technical Advisory & CTO Consulting"
+                    class="service-details mt-6 inline-flex items-center gap-2 text-sm font-bold text-amber-300 hover:text-amber-200"
+                    data-service="consulting"
                 >
-                    View details →
+                    Learn more
+                    <i
+                        data-lucide="arrow-right"
+                        class="h-4 w-4"
+                    ></i>
                 </button>
 
             </article>
@@ -817,20 +910,23 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      ESTIMATOR
-============================================================= -->
+========================================================== -->
+
 <section
     id="estimator"
-    class="border-t border-slate-900 bg-slate-950/50 py-24"
+    class="border-t border-slate-900 bg-slate-950/60 py-24"
 >
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
 
         <div class="max-w-2xl">
 
             <p
-                class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
             >
                 Project Estimator
             </p>
@@ -838,186 +934,285 @@
             <h2
                 class="mt-3 text-3xl font-black text-white sm:text-4xl"
             >
-                Build an initial project estimate.
+                Get a preliminary project estimate.
             </h2>
 
-            <p class="mt-5 leading-7 text-slate-400">
-                This estimator provides an indicative planning figure.
-                Final pricing depends on the confirmed scope,
-                requirements and implementation plan.
+            <p
+                class="mt-4 leading-7 text-slate-400"
+            >
+                Select your requirements to generate a preliminary
+                estimate. Final pricing depends on the confirmed
+                scope and technical requirements.
             </p>
 
         </div>
 
 
         <div
-            class="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]"
+            class="mt-12 grid gap-8 lg:grid-cols-[1fr_380px]"
         >
 
-            <!-- CONTROLS -->
             <div class="glass rounded-3xl p-6 sm:p-8">
 
-                <label
-                    for="service-select"
-                    class="text-sm font-bold text-slate-300"
-                >
-                    Primary service
-                </label>
+                <div>
 
-                <select
-                    id="service-select"
-                    class="mt-3 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
-                >
-                    <option value="cloud">
-                        Cloud Infrastructure & DevOps
-                    </option>
+                    <label
+                        for="service-select"
+                        class="text-sm font-bold text-slate-200"
+                    >
+                        Primary service
+                    </label>
 
-                    <option value="ai">
-                        AI & Machine Learning
-                    </option>
-
-                    <option value="security">
-                        Cybersecurity & Auditing
-                    </option>
-
-                    <option value="web">
-                        Full-Stack Web & App Development
-                    </option>
-
-                    <option value="database">
-                        Database Optimization
-                    </option>
-
-                    <option value="advisory">
-                        Technical Advisory & CTO Consulting
-                    </option>
-                </select>
-
-
-                <div class="mt-8">
-
-                    <div class="flex items-center justify-between">
-
-                        <label
-                            for="scope-slider"
-                            class="text-sm font-bold text-slate-300"
-                        >
-                            Project scope
-                        </label>
-
-                        <span
-                            id="scope-value"
-                            class="rounded-lg bg-cyan-500/10 px-3 py-1 text-sm font-black text-cyan-300"
-                        >
-                            Medium
-                        </span>
-
-                    </div>
-
-
-                    <input
-                        id="scope-slider"
-                        type="range"
-                        min="1"
-                        max="5"
-                        value="3"
-                        class="mt-5 w-full accent-cyan-400"
+                    <select
+                        id="service-select"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
                     >
 
+                        <option value="web">
+                            Web / App Development — $500
+                        </option>
 
-                    <div
-                        class="mt-3 flex justify-between text-xs text-slate-600"
-                    >
-                        <span>Starter</span>
-                        <span>Standard</span>
-                        <span>Enterprise</span>
-                    </div>
+                        <option value="cloud">
+                            Cloud & DevOps — $700
+                        </option>
+
+                        <option value="ai">
+                            AI / Machine Learning — $900
+                        </option>
+
+                        <option value="security">
+                            Cybersecurity — $800
+                        </option>
+
+                        <option value="database">
+                            Database Optimization — $600
+                        </option>
+
+                        <option value="consulting">
+                            Technical Advisory — $350
+                        </option>
+
+                    </select>
 
                 </div>
 
 
-                <!-- ADDONS -->
-                <div class="mt-8">
+                <div class="mt-6">
 
-                    <div
-                        class="text-sm font-bold text-slate-300"
+                    <label
+                        for="scope-select"
+                        class="text-sm font-bold text-slate-200"
                     >
-                        Optional additions
-                    </div>
+                        Project scope
+                    </label>
+
+                    <select
+                        id="scope-select"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                    >
+
+                        <option value="1">
+                            Starter — ×1.00
+                        </option>
+
+                        <option value="1.5">
+                            Professional — ×1.50
+                        </option>
+
+                        <option value="2.25">
+                            Enterprise — ×2.25
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="mt-7">
+
+                    <p
+                        class="text-sm font-bold text-slate-200"
+                    >
+                        Add-ons
+                    </p>
 
 
                     <div class="mt-4 space-y-3">
 
                         <label
-                            class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-800 bg-slate-950/50 p-4"
+                            class="flex cursor-pointer items-center justify-between rounded-xl border border-slate-800 bg-slate-900/60 p-4"
                         >
 
-                            <input
-                                class="addon h-4 w-4 accent-cyan-400"
-                                type="checkbox"
-                                data-price="350"
-                                data-days="3"
-                            >
+                            <span>
 
-                            <span class="flex-1">
-                                <span class="block font-semibold text-white">
+                                <span
+                                    class="block text-sm font-bold text-white"
+                                >
                                     Priority support
                                 </span>
 
-                                <span class="text-xs text-slate-500">
-                                    +$350
+                                <span
+                                    class="text-xs text-slate-500"
+                                >
+                                    +$150
                                 </span>
+
                             </span>
+
+                            <input
+                                type="checkbox"
+                                class="addon h-4 w-4 accent-blue-500"
+                                data-price="150"
+                            >
 
                         </label>
 
 
                         <label
-                            class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-800 bg-slate-950/50 p-4"
+                            class="flex cursor-pointer items-center justify-between rounded-xl border border-slate-800 bg-slate-900/60 p-4"
                         >
 
+                            <span>
+
+                                <span
+                                    class="block text-sm font-bold text-white"
+                                >
+                                    Deployment & CI/CD
+                                </span>
+
+                                <span
+                                    class="text-xs text-slate-500"
+                                >
+                                    +$200
+                                </span>
+
+                            </span>
+
                             <input
-                                class="addon h-4 w-4 accent-cyan-400"
                                 type="checkbox"
-                                data-price="750"
-                                data-days="5"
+                                class="addon h-4 w-4 accent-blue-500"
+                                data-price="200"
                             >
 
-                            <span class="flex-1">
-                                <span class="block font-semibold text-white">
+                        </label>
+
+
+                        <label
+                            class="flex cursor-pointer items-center justify-between rounded-xl border border-slate-800 bg-slate-900/60 p-4"
+                        >
+
+                            <span>
+
+                                <span
+                                    class="block text-sm font-bold text-white"
+                                >
                                     Security review
                                 </span>
 
-                                <span class="text-xs text-slate-500">
-                                    +$750
+                                <span
+                                    class="text-xs text-slate-500"
+                                >
+                                    +$250
                                 </span>
+
                             </span>
-
-                        </label>
-
-
-                        <label
-                            class="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-800 bg-slate-950/50 p-4"
-                        >
 
                             <input
-                                class="addon h-4 w-4 accent-cyan-400"
                                 type="checkbox"
-                                data-price="1200"
-                                data-days="7"
+                                class="addon h-4 w-4 accent-blue-500"
+                                data-price="250"
                             >
 
-                            <span class="flex-1">
-                                <span class="block font-semibold text-white">
-                                    Deployment & monitoring
-                                </span>
-
-                                <span class="text-xs text-slate-500">
-                                    +$1,200
-                                </span>
-                            </span>
-
                         </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESTIMATE RESULT -->
+
+            <aside
+                class="glass h-fit rounded-3xl p-7"
+            >
+
+                <p
+                    class="text-xs font-black uppercase tracking-[0.2em] text-slate-500"
+                >
+                    Preliminary estimate
+                </p>
+
+                <div
+                    id="estimate-total"
+                    class="mt-4 text-5xl font-black text-white"
+                >
+                    $500
+                </div>
+
+                <p
+                    class="mt-3 text-sm leading-6 text-slate-500"
+                >
+                    This is an indicative estimate, not a binding
+                    quotation.
+                </p>
+
+
+                <div
+                    class="mt-7 space-y-3 border-t border-slate-800 pt-6"
+                >
+
+                    <div
+                        class="flex justify-between text-sm"
+                    >
+
+                        <span class="text-slate-500">
+                            Base service
+                        </span>
+
+                        <span
+                            id="estimate-base"
+                            class="font-bold text-slate-200"
+                        >
+                            $500
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="flex justify-between text-sm"
+                    >
+
+                        <span class="text-slate-500">
+                            Scope
+                        </span>
+
+                        <span
+                            id="estimate-scope"
+                            class="font-bold text-slate-200"
+                        >
+                            ×1.00
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="flex justify-between text-sm"
+                    >
+
+                        <span class="text-slate-500">
+                            Add-ons
+                        </span>
+
+                        <span
+                            id="estimate-addons"
+                            class="font-bold text-slate-200"
+                        >
+                            $0
+                        </span>
 
                     </div>
 
@@ -1027,87 +1222,17 @@
                 <button
                     id="proposal-button"
                     type="button"
-                    class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-4 font-black text-slate-950 transition hover:bg-cyan-400"
+                    class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3.5 font-black text-white transition hover:bg-blue-400"
                 >
-                    Request This Proposal
+
                     <i
-                        data-lucide="send"
+                        data-lucide="file-text"
                         class="h-5 w-5"
                     ></i>
+
+                    Request This Proposal
+
                 </button>
-
-            </div>
-
-
-            <!-- RESULT -->
-            <aside
-                class="glass rounded-3xl p-6 sm:p-8"
-            >
-
-                <div
-                    class="text-sm font-bold uppercase tracking-[0.16em] text-slate-500"
-                >
-                    Indicative estimate
-                </div>
-
-
-                <div class="mt-8">
-
-                    <div class="text-sm text-slate-500">
-                        Estimated investment
-                    </div>
-
-                    <div
-                        id="estimate-total"
-                        class="estimate-number mt-2 text-5xl font-black text-white"
-                    >
-                        $3,000
-                    </div>
-
-                </div>
-
-
-                <div
-                    class="my-8 h-px bg-slate-800"
-                ></div>
-
-
-                <div>
-
-                    <div class="text-sm text-slate-500">
-                        Estimated timeline
-                    </div>
-
-                    <div
-                        id="estimate-days"
-                        class="mt-2 text-2xl font-black text-cyan-300"
-                    >
-                        10–15 business days
-                    </div>
-
-                </div>
-
-
-                <div class="mt-8 rounded-2xl bg-slate-950/70 p-5">
-
-                    <div class="flex gap-3">
-
-                        <i
-                            data-lucide="info"
-                            class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300"
-                        ></i>
-
-                        <p
-                            class="text-sm leading-6 text-slate-400"
-                        >
-                            This calculator is for preliminary planning.
-                            It is not a binding quotation, invoice or
-                            contract.
-                        </p>
-
-                    </div>
-
-                </div>
 
             </aside>
 
@@ -1118,312 +1243,148 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      ABOUT
-============================================================= -->
+========================================================== -->
+
 <section
     id="about"
     class="border-t border-slate-900 py-24"
 >
 
     <div
-        class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
     >
 
-        <div>
-
-            <p
-                class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
-            >
-                About
-            </p>
-
-            <h2
-                class="mt-3 text-3xl font-black text-white sm:text-4xl"
-            >
-                Practical engineering. Clear outcomes.
-            </h2>
-
-            <p
-                class="mt-6 leading-8 text-slate-400"
-            >
-                NexisTech Professional Services focuses on practical
-                technology delivery. Our approach connects architecture,
-                engineering, security, infrastructure and operational
-                requirements rather than treating them as isolated
-                activities.
-            </p>
-
-            <p
-                class="mt-5 leading-8 text-slate-400"
-            >
-                Each engagement should begin with a clear understanding
-                of the problem, constraints, required outcome and
-                implementation environment.
-            </p>
-
-        </div>
-
-
-        <div class="grid gap-4 sm:grid-cols-2">
-
-            <div class="glass rounded-2xl p-6">
-
-                <i
-                    data-lucide="target"
-                    class="h-6 w-6 text-cyan-300"
-                ></i>
-
-                <h3
-                    class="mt-5 font-black text-white"
-                >
-                    Outcome Focus
-                </h3>
-
-                <p
-                    class="mt-2 text-sm leading-6 text-slate-500"
-                >
-                    Projects are structured around measurable
-                    technical and business objectives.
-                </p>
-
-            </div>
-
-
-            <div class="glass rounded-2xl p-6">
-
-                <i
-                    data-lucide="layers-3"
-                    class="h-6 w-6 text-violet-300"
-                ></i>
-
-                <h3
-                    class="mt-5 font-black text-white"
-                >
-                    Full Lifecycle
-                </h3>
-
-                <p
-                    class="mt-2 text-sm leading-6 text-slate-500"
-                >
-                    Architecture, implementation, deployment and
-                    operational considerations are connected.
-                </p>
-
-            </div>
-
-
-            <div class="glass rounded-2xl p-6">
-
-                <i
-                    data-lucide="lock-keyhole"
-                    class="h-6 w-6 text-emerald-300"
-                ></i>
-
-                <h3
-                    class="mt-5 font-black text-white"
-                >
-                    Security Aware
-                </h3>
-
-                <p
-                    class="mt-2 text-sm leading-6 text-slate-500"
-                >
-                    Security considerations are integrated into
-                    technical planning.
-                </p>
-
-            </div>
-
-
-            <div class="glass rounded-2xl p-6">
-
-                <i
-                    data-lucide="messages-square"
-                    class="h-6 w-6 text-amber-300"
-                ></i>
-
-                <h3
-                    class="mt-5 font-black text-white"
-                >
-                    Clear Communication
-                </h3>
-
-                <p
-                    class="mt-2 text-sm leading-6 text-slate-500"
-                >
-                    Scope, assumptions and technical constraints
-                    should remain visible throughout delivery.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ============================================================
-     NEXEXCHANGE BANNER
-============================================================= -->
-<section
-    id="banner"
-    class="border-t border-slate-900 bg-slate-950/50 py-24"
->
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-        <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div
+            class="grid gap-12 lg:grid-cols-2 lg:items-center"
+        >
 
             <div>
 
                 <p
-                    class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                    class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
                 >
-                    NexExchange
+                    About NexisTech
                 </p>
 
                 <h2
                     class="mt-3 text-3xl font-black text-white sm:text-4xl"
                 >
-                    Trade • Swap • Grow
+                    Technology should solve problems, not create them.
                 </h2>
 
                 <p
-                    class="mt-5 leading-8 text-slate-400"
+                    class="mt-6 leading-8 text-slate-400"
                 >
-                    Promotional banner concept for NexExchange,
-                    presented as a separate exchange-facing brand
-                    experience.
+                    NexisTech focuses on practical technology
+                    implementations that are maintainable, secure,
+                    scalable, and aligned with business requirements.
                 </p>
 
-
-                <div class="mt-7 space-y-3">
-
-                    <div class="flex items-center gap-3">
-                        <i
-                            data-lucide="check-circle-2"
-                            class="h-5 w-5 text-cyan-300"
-                        ></i>
-
-                        <span class="text-slate-300">
-                            Buy & Sell Crypto
-                        </span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <i
-                            data-lucide="check-circle-2"
-                            class="h-5 w-5 text-cyan-300"
-                        ></i>
-
-                        <span class="text-slate-300">
-                            Top-Level Security
-                        </span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <i
-                            data-lucide="check-circle-2"
-                            class="h-5 w-5 text-cyan-300"
-                        ></i>
-
-                        <span class="text-slate-300">
-                            Competitive Fees
-                        </span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <i
-                            data-lucide="check-circle-2"
-                            class="h-5 w-5 text-cyan-300"
-                        ></i>
-
-                        <span class="text-slate-300">
-                            Global Access
-                        </span>
-                    </div>
-
-                </div>
+                <p
+                    class="mt-4 leading-8 text-slate-400"
+                >
+                    Each engagement begins with understanding the
+                    requirement, identifying technical constraints,
+                    designing an appropriate solution, and delivering
+                    with documentation and deployment considerations.
+                </p>
 
             </div>
 
 
-            <!-- BANNER -->
-            <div
-                class="banner-preview glow rounded-3xl border border-cyan-400/20 p-5"
-            >
+            <div class="grid gap-4 sm:grid-cols-2">
 
-                <div
-                    class="relative flex min-h-[330px] items-center justify-center overflow-hidden rounded-2xl border border-slate-700"
-                >
+                <div class="glass rounded-2xl p-6">
 
-                    <div
-                        class="absolute inset-0 opacity-30"
-                        style="
-                            background-image:
-                            linear-gradient(
-                                90deg,
-                                transparent 49%,
-                                rgba(34,211,238,.25) 50%,
-                                transparent 51%
-                            ),
-                            linear-gradient(
-                                transparent 49%,
-                                rgba(34,211,238,.25) 50%,
-                                transparent 51%
-                            );
-                            background-size: 40px 40px;
-                        "
-                    ></div>
+                    <i
+                        data-lucide="shield"
+                        class="h-6 w-6 text-blue-300"
+                    ></i>
 
+                    <h3
+                        class="mt-5 font-black text-white"
+                    >
+                        Security-conscious
+                    </h3>
 
-                    <div class="relative text-center">
-
-                        <div
-                            class="text-sm font-bold uppercase tracking-[0.35em] text-cyan-300"
-                        >
-                            NexExchange
-                        </div>
-
-                        <div
-                            class="mt-3 text-5xl font-black text-white"
-                        >
-                            Trade
-                        </div>
-
-                        <div
-                            class="text-3xl font-black text-cyan-300"
-                        >
-                            • Swap • Grow
-                        </div>
-
-                        <div
-                            class="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-slate-400"
-                        >
-                            Your Global Crypto Exchange
-                        </div>
-
-                        <div
-                            class="mt-8 grid grid-cols-2 gap-2 text-xs font-semibold text-slate-300"
-                        >
-                            <span>Buy & Sell Crypto</span>
-                            <span>Top-Level Security</span>
-                            <span>Low Fees</span>
-                            <span>Global Access</span>
-                        </div>
-
-                    </div>
+                    <p
+                        class="mt-2 text-sm leading-6 text-slate-500"
+                    >
+                        Security is considered throughout architecture
+                        and implementation.
+                    </p>
 
                 </div>
 
 
-                <div
-                    class="mt-4 text-center text-xs text-slate-500"
-                >
-                    8 ft diameter × 2 ft high hanging-banner concept
+                <div class="glass rounded-2xl p-6">
+
+                    <i
+                        data-lucide="scaling"
+                        class="h-6 w-6 text-purple-300"
+                    ></i>
+
+                    <h3
+                        class="mt-5 font-black text-white"
+                    >
+                        Scalable
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-slate-500"
+                    >
+                        Solutions are designed with future growth
+                        and maintainability in mind.
+                    </p>
+
+                </div>
+
+
+                <div class="glass rounded-2xl p-6">
+
+                    <i
+                        data-lucide="workflow"
+                        class="h-6 w-6 text-cyan-300"
+                    ></i>
+
+                    <h3
+                        class="mt-5 font-black text-white"
+                    >
+                        Practical
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-slate-500"
+                    >
+                        Technology choices are matched to actual
+                        project requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="glass rounded-2xl p-6">
+
+                    <i
+                        data-lucide="messages-square"
+                        class="h-6 w-6 text-emerald-300"
+                    ></i>
+
+                    <h3
+                        class="mt-5 font-black text-white"
+                    >
+                        Transparent
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-slate-500"
+                    >
+                        Scope, assumptions, estimates, and limitations
+                        are communicated clearly.
+                    </p>
+
                 </div>
 
             </div>
@@ -1435,20 +1396,96 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
+     NEXEXCHANGE BANNER
+========================================================== -->
+
+<section
+    id="banner"
+    class="py-8"
+>
+
+    <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
+
+        <div
+            class="relative overflow-hidden rounded-3xl border border-blue-400/20 bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-cyan-500/10 p-8 sm:p-12"
+        >
+
+            <div
+                class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-blue-500/10 blur-3xl"
+            ></div>
+
+            <div
+                class="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center"
+            >
+
+                <div>
+
+                    <p
+                        class="text-xs font-black uppercase tracking-[0.2em] text-blue-300"
+                    >
+                        NexExchange
+                    </p>
+
+                    <h2
+                        class="mt-3 text-3xl font-black text-white"
+                    >
+                        Digital exchange technology concept
+                    </h2>
+
+                    <p
+                        class="mt-4 max-w-2xl leading-7 text-slate-400"
+                    >
+                        Explore technology concepts around modern
+                        digital exchange platforms, automation,
+                        secure transactions, and scalable infrastructure.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#contact"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-black text-slate-950 transition hover:bg-slate-200"
+                >
+
+                    Discuss a Project
+
+                    <i
+                        data-lucide="arrow-up-right"
+                        class="h-5 w-5"
+                    ></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
      SUPPORT / PAYPAL
-============================================================= -->
+========================================================== -->
+
 <section
     id="support"
     class="border-t border-slate-900 py-24"
 >
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+    >
 
         <div class="max-w-2xl">
 
             <p
-                class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
             >
                 Support
             </p>
@@ -1460,11 +1497,10 @@
             </h2>
 
             <p
-                class="mt-5 leading-7 text-slate-400"
+                class="mt-4 leading-7 text-slate-400"
             >
-                Contributions are optional and are processed through
-                third-party payment providers. You can use PayPal,
-                Buy Me a Coffee or Ko-fi.
+                If you find the work useful, you can support ongoing
+                development through one of the options below.
             </p>
 
         </div>
@@ -1474,7 +1510,11 @@
             class="mt-12 grid gap-6 lg:grid-cols-3"
         >
 
-            <!-- PAYPAL -->
+
+            <!-- =================================================
+                 PAYPAL
+            ================================================== -->
+
             <div
                 class="glass rounded-3xl p-6 sm:p-8"
             >
@@ -1486,19 +1526,26 @@
                     <div
                         class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10"
                     >
+
                         <i
                             data-lucide="credit-card"
                             class="h-5 w-5 text-blue-300"
                         ></i>
+
                     </div>
+
 
                     <div>
 
-                        <h3 class="font-black text-white">
+                        <h3
+                            class="font-black text-white"
+                        >
                             PayPal
                         </h3>
 
-                        <p class="text-xs text-slate-500">
+                        <p
+                            class="text-xs text-slate-500"
+                        >
                             Secure donation
                         </p>
 
@@ -1510,55 +1557,74 @@
                 <p
                     class="mt-5 text-sm leading-6 text-slate-400"
                 >
-                    Use the embedded PayPal Donate button when available,
-                    or open the official PayPal-hosted donation page.
+                    Support NexisTech securely through PayPal.
+                    Use the embedded PayPal Donate button when
+                    available or open the official PayPal-hosted
+                    donation page directly.
                 </p>
 
 
-                <!-- PAYPAL CONTAINER -->
+                <!-- =================================================
+                     PAYPAL SDK CONTAINER
+                ================================================== -->
+
                 <div
                     id="paypal-donate-button-container"
-                    class="mt-6 min-h-[55px]"
+                    class="paypal-button-wrapper mt-6 flex min-h-[55px] items-center"
+                    aria-label="PayPal donation button"
                 ></div>
 
 
-                <div
+                <!-- SDK STATUS -->
+
+                <p
                     id="paypal-status"
-                    class="mt-3 text-center text-xs text-slate-500"
+                    class="mt-2 text-xs text-slate-500"
                     aria-live="polite"
                 >
                     Loading PayPal donation button…
-                </div>
+                </p>
 
 
-                <!-- DIRECT PAYPAL PAGE -->
+                <!-- =================================================
+                     GUARANTEED DIRECT PAYPAL FALLBACK
+                ================================================== -->
+
                 <a
                     id="paypal-direct-link"
                     href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-5 py-3.5 text-sm font-black text-cyan-200 transition hover:border-cyan-400 hover:bg-cyan-500/20"
+                    class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0070ba] px-5 py-3.5 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#005ea6] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
-                    Open PayPal Donation Page
 
                     <i
                         data-lucide="external-link"
                         class="h-4 w-4"
                     ></i>
+
+                    Open PayPal Donation Page
+
                 </a>
 
 
+                <!-- COMPLETION MESSAGE -->
+
                 <div
                     id="paypal-thankyou"
-                    class="mt-4 hidden rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-center text-sm text-emerald-300"
+                    class="mt-4 hidden rounded-xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-center text-sm text-emerald-300"
+                    role="status"
                 >
-                    Thank you for your support.
+                    Thank you for supporting NexisTech.
                 </div>
 
             </div>
 
 
-            <!-- BUY ME A COFFEE -->
+            <!-- =================================================
+                 BUY ME A COFFEE
+            ================================================== -->
+
             <div
                 class="glass rounded-3xl p-6 sm:p-8"
             >
@@ -1570,20 +1636,27 @@
                     <div
                         class="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10"
                     >
+
                         <i
                             data-lucide="coffee"
                             class="h-5 w-5 text-amber-300"
                         ></i>
+
                     </div>
+
 
                     <div>
 
-                        <h3 class="font-black text-white">
+                        <h3
+                            class="font-black text-white"
+                        >
                             Buy Me a Coffee
                         </h3>
 
-                        <p class="text-xs text-slate-500">
-                            Community support
+                        <p
+                            class="text-xs text-slate-500"
+                        >
+                            One-time support
                         </p>
 
                     </div>
@@ -1594,8 +1667,7 @@
                 <p
                     class="mt-5 text-sm leading-6 text-slate-400"
                 >
-                    Support development through the Buy Me a Coffee
-                    platform.
+                    Support development through Buy Me a Coffee.
                 </p>
 
 
@@ -1603,20 +1675,25 @@
                     href="https://buymeacoffee.com/mdelijah"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 px-5 py-3.5 font-black text-slate-950 transition hover:bg-amber-300"
+                    class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-amber-400/20 bg-amber-400/10 px-5 py-3.5 text-sm font-black text-amber-300 transition hover:bg-amber-400/20"
                 >
-                    Buy Me a Coffee
 
                     <i
-                        data-lucide="external-link"
+                        data-lucide="coffee"
                         class="h-4 w-4"
                     ></i>
+
+                    Buy Me a Coffee
+
                 </a>
 
             </div>
 
 
-            <!-- KOFI -->
+            <!-- =================================================
+                 KO-FI
+            ================================================== -->
+
             <div
                 class="glass rounded-3xl p-6 sm:p-8"
             >
@@ -1626,22 +1703,29 @@
                 >
 
                     <div
-                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/10"
+                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/10"
                     >
+
                         <i
                             data-lucide="heart-handshake"
-                            class="h-5 w-5 text-violet-300"
+                            class="h-5 w-5 text-cyan-300"
                         ></i>
+
                     </div>
+
 
                     <div>
 
-                        <h3 class="font-black text-white">
-                            Ko-fi Membership
+                        <h3
+                            class="font-black text-white"
+                        >
+                            Ko-fi
                         </h3>
 
-                        <p class="text-xs text-slate-500">
-                            Membership tiers
+                        <p
+                            class="text-xs text-slate-500"
+                        >
+                            Membership & support
                         </p>
 
                     </div>
@@ -1652,8 +1736,8 @@
                 <p
                     class="mt-5 text-sm leading-6 text-slate-400"
                 >
-                    Explore the available Ko-fi membership and
-                    supporter tiers.
+                    Explore Ko-fi support and available membership
+                    options.
                 </p>
 
 
@@ -1661,14 +1745,16 @@
                     href="https://ko-fi.com/mdelijah/tiers"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-violet-400/30 bg-violet-500/10 px-5 py-3.5 font-black text-violet-200 transition hover:bg-violet-500/20"
+                    class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3.5 text-sm font-black text-cyan-300 transition hover:bg-cyan-400/20"
                 >
-                    View Ko-fi Tiers
 
                     <i
                         data-lucide="external-link"
                         class="h-4 w-4"
                     ></i>
+
+                    View Ko-fi Options
+
                 </a>
 
             </div>
@@ -1680,20 +1766,23 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      FAQ
-============================================================= -->
+========================================================== -->
+
 <section
     id="faq"
-    class="border-t border-slate-900 bg-slate-950/50 py-24"
+    class="border-t border-slate-900 py-24"
 >
 
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
+    >
 
         <div class="text-center">
 
             <p
-                class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
             >
                 FAQ
             </p>
@@ -1709,33 +1798,42 @@
 
         <div class="mt-12 space-y-3">
 
-            <!-- FAQ 1 -->
-            <div class="faq-item glass rounded-2xl">
+
+            <div
+                class="faq-item glass overflow-hidden rounded-2xl"
+            >
 
                 <button
                     type="button"
-                    class="faq-button flex w-full items-center justify-between gap-6 p-5 text-left"
-                    aria-expanded="false"
+                    class="faq-question flex w-full items-center justify-between gap-5 px-6 py-5 text-left"
                 >
 
-                    <span class="font-bold text-white">
-                        Is the project estimator a quotation?
+                    <span
+                        class="font-bold text-white"
+                    >
+                        What happens after I request a proposal?
                     </span>
 
                     <i
-                        data-lucide="chevron-down"
-                        class="faq-icon h-5 w-5 shrink-0 text-cyan-300"
+                        data-lucide="plus"
+                        class="faq-icon h-5 w-5 shrink-0 text-slate-400"
                     ></i>
 
                 </button>
 
 
-                <div class="faq-content px-5 pb-5">
+                <div
+                    class="faq-answer hidden max-h-0 opacity-0"
+                >
 
-                    <p class="text-sm leading-7 text-slate-400">
-                        No. The estimator provides an indicative planning
-                        figure. A final proposal may change after the
-                        requirements and scope have been reviewed.
+                    <p
+                        class="px-6 pb-6 text-sm leading-7 text-slate-400"
+                    >
+                        Your request is prepared as an email containing
+                        the selected service, estimated scope, add-ons,
+                        and preliminary estimate. Final project terms
+                        and pricing are confirmed after requirements are
+                        reviewed.
                     </p>
 
                 </div>
@@ -1743,33 +1841,40 @@
             </div>
 
 
-            <!-- FAQ 2 -->
-            <div class="faq-item glass rounded-2xl">
+            <div
+                class="faq-item glass overflow-hidden rounded-2xl"
+            >
 
                 <button
                     type="button"
-                    class="faq-button flex w-full items-center justify-between gap-6 p-5 text-left"
-                    aria-expanded="false"
+                    class="faq-question flex w-full items-center justify-between gap-5 px-6 py-5 text-left"
                 >
 
-                    <span class="font-bold text-white">
-                        Does the website store proposal requests?
+                    <span
+                        class="font-bold text-white"
+                    >
+                        Is the estimator a final quotation?
                     </span>
 
                     <i
-                        data-lucide="chevron-down"
-                        class="faq-icon h-5 w-5 shrink-0 text-cyan-300"
+                        data-lucide="plus"
+                        class="faq-icon h-5 w-5 shrink-0 text-slate-400"
                     ></i>
 
                 </button>
 
 
-                <div class="faq-content px-5 pb-5">
+                <div
+                    class="faq-answer hidden max-h-0 opacity-0"
+                >
 
-                    <p class="text-sm leading-7 text-slate-400">
-                        This static version prepares a proposal request
-                        for email. It does not require a database or
-                        backend endpoint to operate.
+                    <p
+                        class="px-6 pb-6 text-sm leading-7 text-slate-400"
+                    >
+                        No. The estimator provides an indicative
+                        preliminary figure. A final quotation depends
+                        on requirements, scope, integrations, timelines,
+                        infrastructure, and other technical factors.
                     </p>
 
                 </div>
@@ -1777,33 +1882,40 @@
             </div>
 
 
-            <!-- FAQ 3 -->
-            <div class="faq-item glass rounded-2xl">
+            <div
+                class="faq-item glass overflow-hidden rounded-2xl"
+            >
 
                 <button
                     type="button"
-                    class="faq-button flex w-full items-center justify-between gap-6 p-5 text-left"
-                    aria-expanded="false"
+                    class="faq-question flex w-full items-center justify-between gap-5 px-6 py-5 text-left"
                 >
 
-                    <span class="font-bold text-white">
-                        Does PayPal require this website to store payment information?
+                    <span
+                        class="font-bold text-white"
+                    >
+                        Do you provide deployment assistance?
                     </span>
 
                     <i
-                        data-lucide="chevron-down"
-                        class="faq-icon h-5 w-5 shrink-0 text-cyan-300"
+                        data-lucide="plus"
+                        class="faq-icon h-5 w-5 shrink-0 text-slate-400"
                     ></i>
 
                 </button>
 
 
-                <div class="faq-content px-5 pb-5">
+                <div
+                    class="faq-answer hidden max-h-0 opacity-0"
+                >
 
-                    <p class="text-sm leading-7 text-slate-400">
-                        No. The donation flow is handled by PayPal.
-                        This website does not request or store PayPal
-                        passwords, card numbers or payment credentials.
+                    <p
+                        class="px-6 pb-6 text-sm leading-7 text-slate-400"
+                    >
+                        Deployment assistance can be included depending
+                        on the project. Common environments include
+                        Vercel, Netlify, cloud infrastructure, GitHub,
+                        databases, and third-party services.
                     </p>
 
                 </div>
@@ -1811,73 +1923,44 @@
             </div>
 
 
-            <!-- FAQ 4 -->
-            <div class="faq-item glass rounded-2xl">
+            <div
+                class="faq-item glass overflow-hidden rounded-2xl"
+            >
 
                 <button
                     type="button"
-                    class="faq-button flex w-full items-center justify-between gap-6 p-5 text-left"
-                    aria-expanded="false"
+                    class="faq-question flex w-full items-center justify-between gap-5 px-6 py-5 text-left"
                 >
 
-                    <span class="font-bold text-white">
-                        Can I use the direct PayPal donation page?
+                    <span
+                        class="font-bold text-white"
+                    >
+                        How can I contact NexisTech?
                     </span>
 
                     <i
-                        data-lucide="chevron-down"
-                        class="faq-icon h-5 w-5 shrink-0 text-cyan-300"
+                        data-lucide="plus"
+                        class="faq-icon h-5 w-5 shrink-0 text-slate-400"
                     ></i>
 
                 </button>
 
 
-                <div class="faq-content px-5 pb-5">
+                <div
+                    class="faq-answer hidden max-h-0 opacity-0"
+                >
 
-                    <p class="text-sm leading-7 text-slate-400">
-                        Yes. The Support section contains a direct
-                        PayPal-hosted donation link. This also provides
-                        a fallback if the embedded Donate SDK cannot
-                        load.
+                    <p
+                        class="px-6 pb-6 text-sm leading-7 text-slate-400"
+                    >
+                        Use the contact section below or email
+                        smartinvestsi254@gmail.com directly.
                     </p>
 
                 </div>
 
             </div>
 
-
-            <!-- FAQ 5 -->
-            <div class="faq-item glass rounded-2xl">
-
-                <button
-                    type="button"
-                    class="faq-button flex w-full items-center justify-between gap-6 p-5 text-left"
-                    aria-expanded="false"
-                >
-
-                    <span class="font-bold text-white">
-                        Is NexExchange the same service as NexisTech?
-                    </span>
-
-                    <i
-                        data-lucide="chevron-down"
-                        class="faq-icon h-5 w-5 shrink-0 text-cyan-300"
-                    ></i>
-
-                </button>
-
-
-                <div class="faq-content px-5 pb-5">
-
-                    <p class="text-sm leading-7 text-slate-400">
-                        The page presents NexExchange as a separate
-                        exchange-facing brand concept and NexisTech as
-                        the professional technology-services identity.
-                    </p>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -1886,9 +1969,10 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      CONTACT
-============================================================= -->
+========================================================== -->
+
 <section
     id="contact"
     class="border-t border-slate-900 py-24"
@@ -1905,7 +1989,7 @@
             <div>
 
                 <p
-                    class="text-sm font-black uppercase tracking-[0.2em] text-cyan-400"
+                    class="text-sm font-black uppercase tracking-[0.2em] text-blue-400"
                 >
                     Contact
                 </p>
@@ -1913,158 +1997,160 @@
                 <h2
                     class="mt-3 text-3xl font-black text-white sm:text-4xl"
                 >
-                    Start a conversation.
+                    Tell us what you're building.
                 </h2>
 
                 <p
-                    class="mt-5 max-w-xl leading-8 text-slate-400"
+                    class="mt-5 max-w-xl leading-7 text-slate-400"
                 >
-                    For project discussions, technical questions,
-                    proposals or general enquiries, contact us by email.
+                    Provide the basic requirements and NexisTech can
+                    review the project scope and respond with next steps.
                 </p>
 
 
-                <div
-                    class="mt-8 rounded-2xl border border-slate-800 bg-slate-950/60 p-5"
-                >
+                <div class="mt-8 space-y-4">
 
-                    <div class="flex items-center gap-3">
-
-                        <i
-                            data-lucide="mail"
-                            class="h-5 w-5 text-cyan-300"
-                        ></i>
+                    <a
+                        href="mailto:smartinvestsi254@gmail.com"
+                        class="flex items-center gap-4 text-slate-300 transition hover:text-white"
+                    >
 
                         <span
-                            id="contact-email-display"
-                            class="font-bold text-white"
+                            class="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10"
                         >
-                            smartinvestsi@gmail.com
+
+                            <i
+                                data-lucide="mail"
+                                class="h-5 w-5 text-blue-300"
+                            ></i>
+
                         </span>
 
-                    </div>
+                        smartinvestsi254@gmail.com
+
+                    </a>
+
+
+                    <a
+                        href="https://discord.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-4 text-slate-300 transition hover:text-white"
+                    >
+
+                        <span
+                            class="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-500/10"
+                        >
+
+                            <i
+                                data-lucide="message-circle"
+                                class="h-5 w-5 text-purple-300"
+                            ></i>
+
+                        </span>
+
+                        Community / Discord
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="contact-form"
+                class="glass rounded-3xl p-6 sm:p-8"
+            >
+
+                <div>
+
+                    <label
+                        for="contact-name"
+                        class="text-sm font-bold text-slate-200"
+                    >
+                        Name
+                    </label>
+
+                    <input
+                        id="contact-name"
+                        name="name"
+                        type="text"
+                        required
+                        autocomplete="name"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                        placeholder="Your name"
+                    >
 
                 </div>
 
 
-                <a
-                    id="email-link"
-                    href="mailto:smartinvestsi@gmail.com"
-                    class="mt-5 inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3.5 font-black text-slate-950 transition hover:bg-cyan-400"
+                <div class="mt-5">
+
+                    <label
+                        for="contact-email"
+                        class="text-sm font-bold text-slate-200"
+                    >
+                        Email
+                    </label>
+
+                    <input
+                        id="contact-email"
+                        name="email"
+                        type="email"
+                        required
+                        autocomplete="email"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                        placeholder="you@example.com"
+                    >
+
+                </div>
+
+
+                <div class="mt-5">
+
+                    <label
+                        for="contact-message"
+                        class="text-sm font-bold text-slate-200"
+                    >
+                        Message
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        required
+                        rows="6"
+                        class="mt-2 w-full resize-none rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                        placeholder="Tell us about your project..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3.5 font-black text-white transition hover:bg-blue-400"
                 >
-                    Email Us
 
                     <i
-                        data-lucide="mail"
+                        data-lucide="send"
                         class="h-5 w-5"
                     ></i>
-                </a>
 
-            </div>
+                    Send Inquiry
+
+                </button>
 
 
-            <!-- CONTACT FORM -->
-            <div
-                class="glass rounded-3xl p-6 sm:p-8"
-            >
-
-                <form
-                    id="contact-form"
-                    novalidate
+                <p
+                    class="mt-3 text-center text-xs text-slate-500"
                 >
+                    Your email client will open with the inquiry
+                    prepared for submission.
+                </p>
 
-                    <div>
-
-                        <label
-                            for="contact-name"
-                            class="text-sm font-bold text-slate-300"
-                        >
-                            Name
-                        </label>
-
-                        <input
-                            id="contact-name"
-                            name="name"
-                            type="text"
-                            required
-                            maxlength="100"
-                            autocomplete="name"
-                            class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
-                            placeholder="Your name"
-                        >
-
-                    </div>
-
-
-                    <div class="mt-5">
-
-                        <label
-                            for="contact-email"
-                            class="text-sm font-bold text-slate-300"
-                        >
-                            Email
-                        </label>
-
-                        <input
-                            id="contact-email"
-                            name="email"
-                            type="email"
-                            required
-                            maxlength="160"
-                            autocomplete="email"
-                            class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
-                            placeholder="you@example.com"
-                        >
-
-                    </div>
-
-
-                    <div class="mt-5">
-
-                        <label
-                            for="contact-message"
-                            class="text-sm font-bold text-slate-300"
-                        >
-                            Message
-                        </label>
-
-                        <textarea
-                            id="contact-message"
-                            name="message"
-                            rows="6"
-                            required
-                            maxlength="5000"
-                            class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
-                            placeholder="Tell us about your project..."
-                        ></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3.5 font-black text-slate-950 transition hover:bg-cyan-400"
-                    >
-                        Prepare Email
-
-                        <i
-                            data-lucide="send"
-                            class="h-5 w-5"
-                        ></i>
-                    </button>
-
-
-                    <p
-                        class="mt-4 text-xs leading-5 text-slate-600"
-                    >
-                        Submitting this form opens your configured
-                        email application. No form-processing server
-                        is required for this static website.
-                    </p>
-
-                </form>
-
-            </div>
+            </form>
 
         </div>
 
@@ -2073,44 +2159,35 @@
 </section>
 
 
-<!-- ============================================================
+<!-- =========================================================
      TERMS
-============================================================= -->
+========================================================== -->
+
 <section
-    id="terms"
-    class="border-t border-slate-900 py-16"
+    class="border-t border-slate-900 py-12"
 >
 
-    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8"
+    >
 
         <button
-            id="terms-button"
+            id="terms-toggle"
             type="button"
-            class="flex w-full items-center justify-between gap-6 rounded-2xl border border-slate-800 bg-slate-950/70 p-5 text-left"
+            class="glass flex w-full items-center justify-between rounded-2xl px-6 py-5 text-left"
             aria-expanded="false"
         >
 
-            <span>
-
-                <span
-                    class="block text-lg font-black text-white"
-                >
-                    Terms & Conditions
-                </span>
-
-                <span
-                    class="mt-1 block text-sm text-slate-500"
-                >
-                    Website use, third-party services and responsibility
-                </span>
-
+            <span
+                class="font-black text-white"
+            >
+                Terms & Conditions
             </span>
-
 
             <i
                 id="terms-icon"
                 data-lucide="chevron-down"
-                class="h-5 w-5 shrink-0 text-cyan-300 transition-transform"
+                class="h-5 w-5 text-slate-400"
             ></i>
 
         </button>
@@ -2118,185 +2195,167 @@
 
         <div
             id="terms-content"
-            class="terms-content mt-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-6"
+            class="terms-content hidden max-h-0 overflow-hidden opacity-0"
         >
 
-            <div class="space-y-6 text-sm leading-7 text-slate-400">
+            <div
+                class="glass mt-3 rounded-2xl p-6 text-sm leading-7 text-slate-400"
+            >
 
-                <div>
+                <h3
+                    class="font-black text-white"
+                >
+                    1. General information
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        1. Website purpose
-                    </h3>
-
-                    <p class="mt-2">
-                        This website provides information about
-                        professional technology services, project
-                        estimation tools, support options and related
-                        resources.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3 class="font-black text-white">
-                        2. Indicative estimates
-                    </h3>
-
-                    <p class="mt-2">
-                        Any project estimate displayed by this website
-                        is indicative only. It does not constitute a
-                        binding quotation, invoice, service agreement
-                        or guarantee of a particular outcome.
-                    </p>
-
-                </div>
+                <p class="mt-2">
+                    NexisTech Professional Services provides technology
+                    services, consulting, development, technical
+                    assistance, and related digital services.
+                </p>
 
 
-                <div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    2. Estimates and proposals
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        3. Third-party services
-                    </h3>
-
-                    <p class="mt-2">
-                        PayPal, Buy Me a Coffee, Ko-fi, email providers,
-                        hosting providers and other external services
-                        are operated by independent third parties.
-                        Their availability, policies, transactions and
-                        systems are subject to their respective terms
-                        and conditions.
-                    </p>
-
-                </div>
+                <p class="mt-2">
+                    Any estimate generated through this website is
+                    preliminary and provided for planning purposes only.
+                    It does not constitute a final quotation, contract,
+                    guarantee, or binding commitment.
+                </p>
 
 
-                <div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    3. Third-party services
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        4. Payments and donations
-                    </h3>
-
-                    <p class="mt-2">
-                        Donations and payments initiated through
-                        third-party providers are processed according
-                        to the provider's own systems and policies.
-                        This website does not request or store payment
-                        card numbers, passwords or third-party payment
-                        credentials.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3 class="font-black text-white">
-                        5. Availability and inconvenience
-                    </h3>
-
-                    <p class="mt-2">
-                        To the maximum extent permitted by applicable
-                        law, the website owner and operators are not
-                        responsible for inconvenience, interruption,
-                        delay, unavailability, technical malfunction,
-                        communication failure, hosting failure,
-                        third-party service failure or other temporary
-                        problems arising from use of the website or
-                        external services.
-                    </p>
-
-                    <p class="mt-3">
-                        This limitation does not exclude responsibility
-                        that cannot lawfully be excluded or limited
-                        under applicable law.
-                    </p>
-
-                </div>
+                <p class="mt-2">
+                    The website may contain links to or integrations
+                    with third-party services, including PayPal,
+                    Buy Me a Coffee, Ko-fi, hosting providers,
+                    communication platforms, analytics providers,
+                    and other external services.
+                    Third-party services operate under their own
+                    terms, privacy policies, availability, and
+                    technical conditions.
+                </p>
 
 
-                <div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    4. Payments and donations
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        6. Information accuracy
-                    </h3>
-
-                    <p class="mt-2">
-                        Information is provided for general informational
-                        purposes. Users should independently verify
-                        important technical, financial, legal or
-                        transaction-related information before relying
-                        upon it.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3 class="font-black text-white">
-                        7. Security
-                    </h3>
-
-                    <p class="mt-2">
-                        Reasonable measures may be used to maintain the
-                        website, but no internet service can guarantee
-                        absolute security or uninterrupted availability.
-                    </p>
-
-                </div>
+                <p class="mt-2">
+                    Payments and donations made through third-party
+                    payment providers are processed according to the
+                    applicable provider's terms and policies.
+                    NexisTech does not control third-party payment
+                    infrastructure or external payment-provider
+                    availability.
+                </p>
 
 
-                <div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    5. Availability
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        8. Intellectual property
-                    </h3>
-
-                    <p class="mt-2">
-                        Website content, branding, design and original
-                        materials may be protected by applicable
-                        intellectual-property laws. Unauthorized
-                        reproduction or commercial use may be restricted.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3 class="font-black text-white">
-                        9. Acceptance
-                    </h3>
-
-                    <p class="mt-2">
-                        By using this website, you acknowledge that you
-                        have read and understood these general terms.
-                    </p>
-
-                </div>
+                <p class="mt-2">
+                    While reasonable efforts may be made to maintain
+                    availability, uninterrupted operation cannot be
+                    guaranteed. Website functionality may be affected
+                    by hosting providers, internet connectivity,
+                    maintenance, third-party services, software
+                    dependencies, security events, or circumstances
+                    outside reasonable operational control.
+                </p>
 
 
-                <div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    6. Limitation regarding inconvenience
+                </h3>
 
-                    <h3 class="font-black text-white">
-                        10. Contact
-                    </h3>
+                <p class="mt-2">
+                    To the extent permitted by applicable law, the
+                    owner and operator of NexisTech Professional
+                    Services shall not be responsible for inconvenience,
+                    interruption, delay, temporary unavailability,
+                    third-party service failures, compatibility issues,
+                    connectivity problems, or other indirect disruption
+                    arising from the use of this website or external
+                    services linked from it.
+                </p>
 
-                    <p class="mt-2">
-                        Questions regarding these terms can be directed
-                        to
-                        <a
-                            href="mailto:smartinvestsi@gmail.com"
-                            class="font-bold text-cyan-300 hover:text-cyan-200"
-                        >
-                            smartinvestsi@gmail.com
-                        </a>.
-                    </p>
 
-                </div>
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    7. Legal rights
+                </h3>
+
+                <p class="mt-2">
+                    Nothing in these terms is intended to exclude,
+                    restrict, or waive any liability or legal right
+                    that cannot lawfully be excluded or restricted
+                    under applicable law.
+                </p>
+
+
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    8. Information submitted by visitors
+                </h3>
+
+                <p class="mt-2">
+                    Visitors are responsible for ensuring that
+                    information submitted through forms or inquiries
+                    is accurate and does not unlawfully disclose
+                    confidential information belonging to another
+                    person or organization.
+                </p>
+
+
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    9. Changes
+                </h3>
+
+                <p class="mt-2">
+                    These terms may be updated when necessary.
+                    Continued use of the website following publication
+                    of an updated version constitutes use subject to
+                    the updated terms to the extent permitted by law.
+                </p>
+
+
+                <h3
+                    class="mt-7 font-black text-white"
+                >
+                    10. Contact
+                </h3>
+
+                <p class="mt-2">
+                    Questions regarding these terms may be directed to:
+                    <a
+                        href="mailto:smartinvestsi254@gmail.com"
+                        class="font-semibold text-blue-300 hover:text-blue-200"
+                    >
+                        smartinvestsi254@gmail.com
+                    </a>
+                </p>
 
             </div>
 
@@ -2309,15 +2368,16 @@
 </main>
 
 
-<!-- ============================================================
+<!-- =========================================================
      FOOTER
-============================================================= -->
+========================================================== -->
+
 <footer
-    class="border-t border-slate-900 bg-slate-950"
+    class="border-t border-slate-900 bg-slate-950 py-12"
 >
 
     <div
-        class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"
+        class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
     >
 
         <div
@@ -2331,34 +2391,29 @@
                 >
 
                     <div
-                        class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10"
+                        class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10"
                     >
+
                         <i
                             data-lucide="cpu"
-                            class="h-5 w-5 text-cyan-300"
+                            class="h-5 w-5 text-blue-300"
                         ></i>
+
                     </div>
 
-                    <div>
-                        <div class="font-black text-white">
-                            NexisTech
-                        </div>
-
-                        <div
-                            class="text-[10px] uppercase tracking-[0.2em] text-slate-600"
-                        >
-                            Professional Services
-                        </div>
-                    </div>
+                    <span
+                        class="font-black text-white"
+                    >
+                        NexisTech
+                    </span>
 
                 </div>
 
-
                 <p
-                    class="mt-5 max-w-sm text-sm leading-6 text-slate-500"
+                    class="mt-4 max-w-sm text-sm leading-6 text-slate-500"
                 >
-                    Digital engineering, infrastructure,
-                    cybersecurity, applications and technical advisory.
+                    Professional technology services for modern
+                    digital businesses.
                 </p>
 
             </div>
@@ -2366,47 +2421,49 @@
 
             <div>
 
-                <div
+                <h3
                     class="font-black text-white"
                 >
                     Navigation
-                </div>
+                </h3>
 
-                <div class="mt-4 grid gap-3 text-sm">
+                <div
+                    class="mt-4 space-y-2 text-sm"
+                >
 
                     <a
                         href="#services"
-                        class="text-slate-500 hover:text-cyan-300"
+                        class="block text-slate-500 hover:text-white"
                     >
                         Services
                     </a>
 
                     <a
                         href="#estimator"
-                        class="text-slate-500 hover:text-cyan-300"
+                        class="block text-slate-500 hover:text-white"
                     >
                         Estimator
                     </a>
 
                     <a
                         href="#about"
-                        class="text-slate-500 hover:text-cyan-300"
+                        class="block text-slate-500 hover:text-white"
                     >
                         About
                     </a>
 
                     <a
-                        href="#support"
-                        class="text-slate-500 hover:text-cyan-300"
+                        href="#faq"
+                        class="block text-slate-500 hover:text-white"
                     >
-                        Support
+                        FAQ
                     </a>
 
                     <a
-                        href="#terms"
-                        class="text-slate-500 hover:text-cyan-300"
+                        href="#contact"
+                        class="block text-slate-500 hover:text-white"
                     >
-                        Terms & Conditions
+                        Contact
                     </a>
 
                 </div>
@@ -2416,38 +2473,48 @@
 
             <div>
 
-                <div
+                <h3
                     class="font-black text-white"
                 >
-                    Contact
-                </div>
+                    Support
+                </h3>
 
-                <div class="mt-4 space-y-3 text-sm">
-
-                    <a
-                        href="mailto:smartinvestsi@gmail.com"
-                        class="flex items-center gap-2 text-slate-500 hover:text-cyan-300"
-                    >
-                        <i
-                            data-lucide="mail"
-                            class="h-4 w-4"
-                        ></i>
-
-                        smartinvestsi@gmail.com
-                    </a>
+                <div
+                    class="mt-4 space-y-2 text-sm"
+                >
 
                     <a
                         href="https://www.paypal.com/donate/?hosted_button_id=26SLEPXAKRGSE"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="flex items-center gap-2 text-slate-500 hover:text-cyan-300"
+                        class="block text-slate-500 hover:text-white"
                     >
-                        <i
-                            data-lucide="heart"
-                            class="h-4 w-4"
-                        ></i>
-
                         PayPal Donation
+                    </a>
+
+                    <a
+                        href="https://buymeacoffee.com/mdelijah"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="block text-slate-500 hover:text-white"
+                    >
+                        Buy Me a Coffee
+                    </a>
+
+                    <a
+                        href="https://ko-fi.com/mdelijah/tiers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="block text-slate-500 hover:text-white"
+                    >
+                        Ko-fi
+                    </a>
+
+                    <a
+                        href="mailto:smartinvestsi254@gmail.com"
+                        class="block text-slate-500 hover:text-white"
+                    >
+                        Email
                     </a>
 
                 </div>
@@ -2458,18 +2525,18 @@
 
 
         <div
-            class="mt-12 flex flex-col gap-3 border-t border-slate-900 pt-6 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between"
+            class="mt-10 flex flex-col gap-3 border-t border-slate-900 pt-7 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between"
         >
 
-            <div>
+            <p>
                 © <span id="current-year"></span>
-                NexisTech Professional Services. All rights reserved.
-            </div>
+                NexisTech Professional Services.
+                All rights reserved.
+            </p>
 
-            <div>
-                General information only. Third-party services subject
-                to their own terms.
-            </div>
+            <p>
+                Estimates are preliminary and subject to confirmed scope.
+            </p>
 
         </div>
 
@@ -2478,9 +2545,10 @@
 </footer>
 
 
-<!-- ============================================================
+<!-- =========================================================
      SERVICE MODAL
-============================================================= -->
+========================================================== -->
+
 <div
     id="service-modal"
     class="modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center p-4"
@@ -2490,7 +2558,7 @@
 >
 
     <div
-        class="w-full max-w-2xl rounded-3xl border border-slate-700 bg-slate-950 p-6 shadow-2xl sm:p-8"
+        class="glass max-h-[90vh] w-full max-w-2xl overflow-auto rounded-3xl p-7 sm:p-9"
     >
 
         <div
@@ -2499,11 +2567,11 @@
 
             <div>
 
-                <div
-                    class="text-xs font-black uppercase tracking-[0.2em] text-cyan-400"
+                <p
+                    class="text-xs font-black uppercase tracking-[0.2em] text-blue-400"
                 >
                     Service
-                </div>
+                </p>
 
                 <h2
                     id="service-modal-title"
@@ -2532,44 +2600,46 @@
         </div>
 
 
-        <p
-            id="service-modal-description"
-            class="mt-6 leading-7 text-slate-400"
-        ></p>
-
-
         <div
-            id="service-modal-list"
-            class="mt-6 grid gap-3 sm:grid-cols-2"
+            id="service-modal-body"
+            class="mt-6 text-sm leading-7 text-slate-400"
         ></div>
 
 
-        <button
-            id="service-modal-action"
-            type="button"
-            class="mt-8 w-full rounded-xl bg-cyan-500 px-5 py-3.5 font-black text-slate-950 hover:bg-cyan-400"
+        <a
+            href="#contact"
+            id="service-modal-contact"
+            class="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3.5 font-black text-white hover:bg-blue-400"
         >
-            Estimate This Service
-        </button>
+
+            Discuss This Service
+
+            <i
+                data-lucide="arrow-right"
+                class="h-4 w-4"
+            ></i>
+
+        </a>
 
     </div>
 
 </div>
 
 
-<!-- ============================================================
+<!-- =========================================================
      PROPOSAL MODAL
-============================================================= -->
+========================================================== -->
+
 <div
     id="proposal-modal"
-    class="modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center overflow-y-auto p-4"
+    class="modal-backdrop fixed inset-0 z-[100] hidden items-center justify-center p-4"
     role="dialog"
     aria-modal="true"
     aria-labelledby="proposal-modal-title"
 >
 
     <div
-        class="my-8 w-full max-w-2xl rounded-3xl border border-slate-700 bg-slate-950 p-6 shadow-2xl sm:p-8"
+        class="glass max-h-[90vh] w-full max-w-2xl overflow-auto rounded-3xl p-7 sm:p-9"
     >
 
         <div
@@ -2578,17 +2648,17 @@
 
             <div>
 
-                <div
-                    class="text-xs font-black uppercase tracking-[0.2em] text-cyan-400"
+                <p
+                    class="text-xs font-black uppercase tracking-[0.2em] text-blue-400"
                 >
-                    Proposal request
-                </div>
+                    Proposal Request
+                </p>
 
                 <h2
                     id="proposal-modal-title"
                     class="mt-2 text-2xl font-black text-white"
                 >
-                    Request your proposal
+                    Request This Proposal
                 </h2>
 
             </div>
@@ -2598,7 +2668,7 @@
                 id="proposal-modal-close"
                 type="button"
                 class="rounded-xl border border-slate-700 p-2 text-slate-400 hover:text-white"
-                aria-label="Close proposal form"
+                aria-label="Close proposal request"
             >
 
                 <i
@@ -2611,15 +2681,9 @@
         </div>
 
 
-        <div
-            id="proposal-summary"
-            class="mt-6 rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5"
-        ></div>
-
-
         <form
             id="proposal-form"
-            class="mt-6"
+            class="mt-7"
         >
 
             <div class="grid gap-5 sm:grid-cols-2">
@@ -2628,18 +2692,16 @@
 
                     <label
                         for="proposal-name"
-                        class="text-sm font-bold text-slate-300"
+                        class="text-sm font-bold text-slate-200"
                     >
                         Name
                     </label>
 
                     <input
                         id="proposal-name"
-                        name="name"
                         required
-                        maxlength="100"
                         type="text"
-                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
                         placeholder="Your name"
                     >
 
@@ -2650,18 +2712,16 @@
 
                     <label
                         for="proposal-email"
-                        class="text-sm font-bold text-slate-300"
+                        class="text-sm font-bold text-slate-200"
                     >
                         Email
                     </label>
 
                     <input
                         id="proposal-email"
-                        name="email"
                         required
-                        maxlength="160"
                         type="email"
-                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
+                        class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
                         placeholder="you@example.com"
                     >
 
@@ -2673,35 +2733,69 @@
             <div class="mt-5">
 
                 <label
-                    for="proposal-notes"
-                    class="text-sm font-bold text-slate-300"
+                    for="proposal-company"
+                    class="text-sm font-bold text-slate-200"
                 >
-                    Project notes
+                    Company / Organization
+                </label>
+
+                <input
+                    id="proposal-company"
+                    type="text"
+                    class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                    placeholder="Optional"
+                >
+
+            </div>
+
+
+            <div class="mt-5">
+
+                <label
+                    for="proposal-requirements"
+                    class="text-sm font-bold text-slate-200"
+                >
+                    Project requirements
                 </label>
 
                 <textarea
-                    id="proposal-notes"
-                    name="notes"
-                    rows="5"
-                    maxlength="5000"
-                    class="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3.5 text-slate-200"
-                    placeholder="Briefly describe what you want built..."
+                    id="proposal-requirements"
+                    required
+                    rows="6"
+                    class="mt-2 w-full resize-none rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none focus:border-blue-500"
+                    placeholder="Describe what you need..."
                 ></textarea>
 
             </div>
 
 
+            <div
+                id="proposal-summary"
+                class="mt-5 rounded-2xl border border-slate-800 bg-slate-900/60 p-5 text-sm text-slate-400"
+            ></div>
+
+
             <button
                 type="submit"
-                class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3.5 font-black text-slate-950 hover:bg-cyan-400"
+                class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3.5 font-black text-white hover:bg-blue-400"
             >
-                Open Email Draft
 
                 <i
                     data-lucide="mail"
                     class="h-5 w-5"
                 ></i>
+
+                Prepare Proposal Request
+
             </button>
+
+
+            <p
+                class="mt-3 text-center text-xs text-slate-500"
+            >
+                Your default email application will open with
+                the proposal request prepared.
+            </p>
 
         </form>
 
@@ -2710,69 +2804,102 @@
 </div>
 
 
-<!-- ============================================================
+<!-- =========================================================
      JAVASCRIPT
-============================================================= -->
+========================================================== -->
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+
+(function () {
 
     "use strict";
 
 
-    /* =========================================================
+    /* ========================================================
        CONFIG
-    ========================================================== */
+    ======================================================== */
 
-    const CONFIG = window.SITE_CONFIG;
+    const CONFIG =
+        window.SITE_CONFIG || {};
 
 
-    /* =========================================================
+    const EMAIL =
+        CONFIG.contactEmail ||
+        "smartinvestsi254@gmail.com";
+
+
+    const PAYPAL_ID =
+        CONFIG.paypalHostedButtonId ||
+        "26SLEPXAKRGSE";
+
+
+    const PAYPAL_URL =
+        CONFIG.paypalDonationUrl ||
+        "https://www.paypal.com/donate/?hosted_button_id=" +
+        PAYPAL_ID;
+
+
+    /* ========================================================
        LUCIDE
-    ========================================================== */
+    ======================================================== */
 
-    if (
-        window.lucide &&
-        typeof window.lucide.createIcons === "function"
-    ) {
-        window.lucide.createIcons();
+    function initializeIcons() {
+
+        if (
+            typeof window.lucide !== "undefined" &&
+            typeof window.lucide.createIcons === "function"
+        ) {
+
+            window.lucide.createIcons();
+
+        }
+
     }
 
 
-    /* =========================================================
+    /* ========================================================
        CURRENT YEAR
-    ========================================================== */
+    ======================================================== */
 
     const yearElement =
         document.getElementById("current-year");
 
     if (yearElement) {
+
         yearElement.textContent =
             new Date().getFullYear();
+
     }
 
 
-    /* =========================================================
-       MOBILE MENU
-    ========================================================== */
+    /* ========================================================
+       MOBILE NAVIGATION
+    ======================================================== */
 
-    const mobileMenuButton =
+    const mobileButton =
         document.getElementById("mobile-menu-button");
 
     const mobileMenu =
         document.getElementById("mobile-menu");
 
-    if (mobileMenuButton && mobileMenu) {
 
-        mobileMenuButton.addEventListener(
+    if (mobileButton && mobileMenu) {
+
+        mobileButton.addEventListener(
             "click",
             function () {
 
-                const isOpen =
-                    mobileMenu.classList.toggle("open");
+                const isHidden =
+                    mobileMenu.classList.contains("hidden");
 
-                mobileMenuButton.setAttribute(
+                mobileMenu.classList.toggle(
+                    "hidden",
+                    !isHidden
+                );
+
+                mobileButton.setAttribute(
                     "aria-expanded",
-                    String(isOpen)
+                    String(isHidden)
                 );
 
             }
@@ -2780,16 +2907,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         document
-            .querySelectorAll(".mobile-link")
+            .querySelectorAll(".mobile-nav-link")
             .forEach(function (link) {
 
                 link.addEventListener(
                     "click",
                     function () {
 
-                        mobileMenu.classList.remove("open");
+                        mobileMenu.classList.add("hidden");
 
-                        mobileMenuButton.setAttribute(
+                        mobileButton.setAttribute(
                             "aria-expanded",
                             "false"
                         );
@@ -2802,303 +2929,139 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================================
-       FAQ
-    ========================================================== */
-
-    document
-        .querySelectorAll(".faq-button")
-        .forEach(function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    const item =
-                        button.closest(".faq-item");
-
-                    if (!item) {
-                        return;
-                    }
-
-                    const isOpen =
-                        item.classList.toggle("open");
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                }
-            );
-
-        });
-
-
-    /* =========================================================
-       TERMS
-    ========================================================== */
-
-    const termsButton =
-        document.getElementById("terms-button");
-
-    const termsContent =
-        document.getElementById("terms-content");
-
-    const termsIcon =
-        document.getElementById("terms-icon");
-
-    if (
-        termsButton &&
-        termsContent
-    ) {
-
-        termsButton.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    termsContent.classList.toggle("open");
-
-                termsButton.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
-                if (termsIcon) {
-
-                    termsIcon.style.transform =
-                        isOpen
-                            ? "rotate(180deg)"
-                            : "rotate(0deg)";
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* =========================================================
-       ESTIMATOR DATA
-    ========================================================== */
-
-    const services = {
-
-        cloud: {
-            name: "Cloud Infrastructure & DevOps",
-            base: 3500,
-            days: 12
-        },
-
-        ai: {
-            name: "AI & Machine Learning",
-            base: 5000,
-            days: 18
-        },
-
-        security: {
-            name: "Cybersecurity & Auditing",
-            base: 4200,
-            days: 14
-        },
-
-        web: {
-            name: "Full-Stack Web & App Development",
-            base: 3000,
-            days: 15
-        },
-
-        database: {
-            name: "Database Optimization",
-            base: 2800,
-            days: 10
-        },
-
-        advisory: {
-            name: "Technical Advisory & CTO Consulting",
-            base: 2200,
-            days: 7
-        }
-
-    };
-
-
-    const scopeData = {
-
-        1: {
-            name: "Starter",
-            multiplier: 0.65,
-            days: 0.7
-        },
-
-        2: {
-            name: "Small",
-            multiplier: 0.85,
-            days: 0.85
-        },
-
-        3: {
-            name: "Medium",
-            multiplier: 1,
-            days: 1
-        },
-
-        4: {
-            name: "Large",
-            multiplier: 1.45,
-            days: 1.35
-        },
-
-        5: {
-            name: "Enterprise",
-            multiplier: 2.1,
-            days: 1.8
-        }
-
-    };
-
+    /* ========================================================
+       ESTIMATOR
+    ======================================================== */
 
     const serviceSelect =
         document.getElementById("service-select");
 
-    const scopeSlider =
-        document.getElementById("scope-slider");
-
-    const scopeValue =
-        document.getElementById("scope-value");
+    const scopeSelect =
+        document.getElementById("scope-select");
 
     const estimateTotal =
         document.getElementById("estimate-total");
 
-    const estimateDays =
-        document.getElementById("estimate-days");
+    const estimateBase =
+        document.getElementById("estimate-base");
 
-    let currentEstimate = {
-        serviceKey: "cloud",
-        serviceName: services.cloud.name,
-        total: 0,
-        days: 0,
-        scope: "Medium",
-        addons: []
+    const estimateScope =
+        document.getElementById("estimate-scope");
+
+    const estimateAddons =
+        document.getElementById("estimate-addons");
+
+
+    const servicePrices = {
+
+        web: 500,
+
+        cloud: 700,
+
+        ai: 900,
+
+        security: 800,
+
+        database: 600,
+
+        consulting: 350
+
     };
+
+
+    function formatCurrency(value) {
+
+        return "$" +
+            Number(value).toLocaleString(
+                "en-US",
+                {
+                    maximumFractionDigits: 0
+                }
+            );
+
+    }
 
 
     function calculateEstimate() {
 
-        if (
-            !serviceSelect ||
-            !scopeSlider
-        ) {
-            return;
+        if (!serviceSelect || !scopeSelect) {
+            return null;
         }
 
-
-        const serviceKey =
-            serviceSelect.value;
 
         const service =
-            services[serviceKey];
+            serviceSelect.value;
 
-        const scopeKey =
-            Number(scopeSlider.value);
-
-        const scope =
-            scopeData[scopeKey];
+        const base =
+            servicePrices[service] || 0;
 
 
-        if (!service || !scope) {
-            return;
-        }
+        const multiplier =
+            Number(scopeSelect.value) || 1;
 
 
-        let total =
-            service.base * scope.multiplier;
-
-        let days =
-            service.days * scope.days;
-
-
-        const selectedAddons = [];
+        let addons = 0;
 
 
         document
             .querySelectorAll(".addon:checked")
-            .forEach(function (addon) {
+            .forEach(function (checkbox) {
 
-                const price =
-                    Number(addon.dataset.price || 0);
-
-                const addonDays =
-                    Number(addon.dataset.days || 0);
-
-                total += price;
-                days += addonDays;
-
-                selectedAddons.push({
-                    price: price,
-                    days: addonDays
-                });
+                addons +=
+                    Number(
+                        checkbox.dataset.price
+                    ) || 0;
 
             });
 
 
-        /*
-         * Round the displayed estimate to the nearest $50.
-         */
-        total =
-            Math.round(total / 50) * 50;
+        const subtotal =
+            base * multiplier;
 
-
-        /*
-         * Produce a practical range.
-         */
-        const minimumDays =
-            Math.max(3, Math.round(days * 0.85));
-
-        const maximumDays =
-            Math.max(
-                minimumDays + 2,
-                Math.round(days * 1.15)
-            );
-
-
-        if (scopeValue) {
-            scopeValue.textContent =
-                scope.name;
-        }
+        const total =
+            subtotal + addons;
 
 
         if (estimateTotal) {
 
             estimateTotal.textContent =
-                "$" +
-                total.toLocaleString(
-                    "en-US"
-                );
+                formatCurrency(total);
 
         }
 
 
-        if (estimateDays) {
+        if (estimateBase) {
 
-            estimateDays.textContent =
-                minimumDays +
-                "–" +
-                maximumDays +
-                " business days";
+            estimateBase.textContent =
+                formatCurrency(base);
 
         }
 
 
-        currentEstimate = {
-            serviceKey: serviceKey,
-            serviceName: service.name,
-            total: total,
-            days: days,
-            scope: scope.name,
-            addons: selectedAddons
+        if (estimateScope) {
+
+            estimateScope.textContent =
+                "×" + multiplier.toFixed(2);
+
+        }
+
+
+        if (estimateAddons) {
+
+            estimateAddons.textContent =
+                formatCurrency(addons);
+
+        }
+
+
+        return {
+
+            service,
+            base,
+            multiplier,
+            addons,
+            total
+
         };
 
     }
@@ -3114,10 +3077,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    if (scopeSlider) {
+    if (scopeSelect) {
 
-        scopeSlider.addEventListener(
-            "input",
+        scopeSelect.addEventListener(
+            "change",
             calculateEstimate
         );
 
@@ -3126,9 +3089,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document
         .querySelectorAll(".addon")
-        .forEach(function (addon) {
+        .forEach(function (checkbox) {
 
-            addon.addEventListener(
+            checkbox.addEventListener(
                 "change",
                 calculateEstimate
             );
@@ -3139,108 +3102,141 @@ document.addEventListener("DOMContentLoaded", function () {
     calculateEstimate();
 
 
-    /* =========================================================
+    /* ========================================================
        SERVICE MODAL
-    ========================================================== */
+    ======================================================== */
 
     const serviceModal =
         document.getElementById("service-modal");
 
-    const serviceModalClose =
-        document.getElementById("service-modal-close");
-
     const serviceModalTitle =
         document.getElementById("service-modal-title");
 
-    const serviceModalDescription =
-        document.getElementById("service-modal-description");
+    const serviceModalBody =
+        document.getElementById("service-modal-body");
 
-    const serviceModalList =
-        document.getElementById("service-modal-list");
-
-    const serviceModalAction =
-        document.getElementById("service-modal-action");
+    const serviceModalClose =
+        document.getElementById("service-modal-close");
 
 
-    const serviceDescriptions = {
+    const serviceDetails = {
 
-        "Cloud Infrastructure & DevOps": {
-            description:
-                "Infrastructure planning and implementation focused on reliable deployment, automation, monitoring and operational visibility.",
-            items: [
-                "Cloud architecture",
-                "CI/CD pipelines",
-                "Infrastructure automation",
-                "Monitoring and logging"
-            ]
+        cloud: {
+
+            title:
+                "Cloud Infrastructure & DevOps",
+
+            body:
+                "Services can include cloud architecture, deployment automation, CI/CD pipelines, infrastructure configuration, monitoring, logging, scalability planning, backups, and operational optimization. The exact implementation depends on the selected cloud environment and project requirements."
+
         },
 
-        "AI & Machine Learning": {
-            description:
-                "AI and machine-learning integration for applications, automation, data workflows and intelligent business processes.",
-            items: [
-                "AI application integration",
-                "Automation workflows",
-                "Data pipelines",
-                "Model integration"
-            ]
+
+        ai: {
+
+            title:
+                "AI & Machine Learning",
+
+            body:
+                "AI and machine-learning engagements can include intelligent application features, workflow automation, data processing, model integration, evaluation workflows, API integration, and responsible deployment considerations."
+
         },
 
-        "Cybersecurity & Auditing": {
-            description:
-                "Technical security assessment and hardening designed to identify weaknesses and improve security controls.",
-            items: [
-                "Security assessment",
-                "Application hardening",
-                "Access-control review",
-                "Risk documentation"
-            ]
+
+        security: {
+
+            title:
+                "Cybersecurity & Auditing",
+
+            body:
+                "Security work can include application reviews, configuration assessments, access-control reviews, vulnerability identification, security hardening, logging considerations, and recommendations for reducing technical risk."
+
         },
 
-        "Full-Stack Web & App Development": {
-            description:
-                "Modern web and application development covering user interfaces, APIs, authentication and deployment.",
-            items: [
-                "Responsive interfaces",
-                "Backend APIs",
-                "Authentication",
-                "Deployment integration"
-            ]
+
+        development: {
+
+            title:
+                "Full-Stack Web & App Development",
+
+            body:
+                "Development services can cover responsive websites, dashboards, web applications, APIs, authentication, databases, integrations, frontend interfaces, backend systems, testing, and deployment."
+
         },
 
-        "Database Optimization": {
-            description:
-                "Database architecture and optimization work focused on performance, reliability, maintainability and security.",
-            items: [
-                "Schema review",
-                "Query optimization",
-                "Indexing",
-                "Access policies"
-            ]
+
+        database: {
+
+            title:
+                "Database Optimization",
+
+            body:
+                "Database work can include schema review, query optimization, indexes, migrations, backup strategy, access controls, data organization, performance analysis, and integration with application infrastructure."
+
         },
 
-        "Technical Advisory & CTO Consulting": {
-            description:
-                "Technical strategy and architecture guidance for organizations making technology, infrastructure and product decisions.",
-            items: [
-                "Architecture review",
-                "Technology planning",
-                "Technical roadmaps",
-                "Engineering advisory"
-            ]
+
+        consulting: {
+
+            title:
+                "Technical Advisory & CTO Consulting",
+
+            body:
+                "Advisory engagements can cover technical roadmaps, architecture decisions, technology evaluation, engineering processes, deployment strategy, project planning, documentation, and technical leadership support."
+
         }
 
     };
 
 
-    function closeServiceModal() {
+    function openServiceModal(key) {
 
-        if (serviceModal) {
+        const service =
+            serviceDetails[key];
 
-            serviceModal.classList.add("hidden");
-            serviceModal.classList.remove("flex");
+        if (!service || !serviceModal) {
+            return;
+        }
+
+
+        if (serviceModalTitle) {
+
+            serviceModalTitle.textContent =
+                service.title;
 
         }
+
+
+        if (serviceModalBody) {
+
+            serviceModalBody.textContent =
+                service.body;
+
+        }
+
+
+        serviceModal.classList.remove("hidden");
+
+        serviceModal.classList.add("flex");
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    function closeServiceModal() {
+
+        if (!serviceModal) {
+            return;
+        }
+
+        serviceModal.classList.add("hidden");
+
+        serviceModal.classList.remove("flex");
+
+        document.body.style.overflow =
+            "";
 
     }
 
@@ -3253,43 +3249,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 "click",
                 function () {
 
-                    const serviceName =
-                        button.dataset.service;
-
-                    const data =
-                        serviceDescriptions[serviceName];
-
-                    if (
-                        !serviceModal ||
-                        !data
-                    ) {
-                        return;
-                    }
-
-
-                    serviceModalTitle.textContent =
-                        serviceName;
-
-                    serviceModalDescription.textContent =
-                        data.description;
-
-
-                    serviceModalList.innerHTML =
-                        data.items
-                            .map(function (item) {
-
-                                return `
-                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-4 text-sm font-semibold text-slate-300">
-                                        ${escapeHtml(item)}
-                                    </div>
-                                `;
-
-                            })
-                            .join("");
-
-
-                    serviceModal.classList.remove("hidden");
-                    serviceModal.classList.add("flex");
+                    openServiceModal(
+                        button.dataset.service
+                    );
 
                 }
             );
@@ -3316,31 +3278,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (
                     event.target === serviceModal
                 ) {
+
                     closeServiceModal();
-                }
-
-            }
-        );
-
-    }
-
-
-    if (serviceModalAction) {
-
-        serviceModalAction.addEventListener(
-            "click",
-            function () {
-
-                closeServiceModal();
-
-                const estimator =
-                    document.getElementById("estimator");
-
-                if (estimator) {
-
-                    estimator.scrollIntoView({
-                        behavior: "smooth"
-                    });
 
                 }
 
@@ -3350,9 +3289,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================================
+    /* ========================================================
        PROPOSAL MODAL
-    ========================================================== */
+    ======================================================== */
 
     const proposalButton =
         document.getElementById("proposal-button");
@@ -3366,52 +3305,84 @@ document.addEventListener("DOMContentLoaded", function () {
     const proposalSummary =
         document.getElementById("proposal-summary");
 
-    const proposalForm =
-        document.getElementById("proposal-form");
 
+    function getProposalData() {
 
-    function updateProposalSummary() {
-
-        if (!proposalSummary) {
-            return;
-        }
-
-
-        proposalSummary.innerHTML = `
-            <div class="text-xs font-black uppercase tracking-[0.16em] text-cyan-400">
-                Current estimate
-            </div>
-
-            <div class="mt-3 font-black text-white">
-                ${escapeHtml(currentEstimate.serviceName)}
-            </div>
-
-            <div class="mt-2 text-sm text-slate-400">
-                Scope: ${escapeHtml(currentEstimate.scope)}
-            </div>
-
-            <div class="mt-4 text-2xl font-black text-cyan-300">
-                $${currentEstimate.total.toLocaleString("en-US")}
-            </div>
-
-            <div class="mt-1 text-xs text-slate-500">
-                Indicative estimate only
-            </div>
-        `;
+        return calculateEstimate();
 
     }
 
 
     function openProposalModal() {
 
-        if (!proposalModal) {
+        const data =
+            getProposalData();
+
+        if (!proposalModal || !data) {
             return;
         }
 
-        updateProposalSummary();
 
-        proposalModal.classList.remove("hidden");
-        proposalModal.classList.add("flex");
+        const serviceName =
+            serviceSelect.options[
+                serviceSelect.selectedIndex
+            ].text;
+
+
+        if (proposalSummary) {
+
+            proposalSummary.innerHTML =
+
+                "<div class='font-bold text-white'>" +
+                "Preliminary project summary" +
+                "</div>" +
+
+                "<div class='mt-3 space-y-2'>" +
+
+                "<div class='flex justify-between gap-4'>" +
+                "<span>Service</span>" +
+                "<span class='text-slate-200'>" +
+                serviceName +
+                "</span>" +
+                "</div>" +
+
+                "<div class='flex justify-between gap-4'>" +
+                "<span>Scope</span>" +
+                "<span class='text-slate-200'>" +
+                "×" +
+                data.multiplier.toFixed(2) +
+                "</span>" +
+                "</div>" +
+
+                "<div class='flex justify-between gap-4'>" +
+                "<span>Add-ons</span>" +
+                "<span class='text-slate-200'>" +
+                formatCurrency(data.addons) +
+                "</span>" +
+                "</div>" +
+
+                "<div class='flex justify-between gap-4 border-t border-slate-800 pt-2'>" +
+                "<span>Estimate</span>" +
+                "<span class='font-black text-white'>" +
+                formatCurrency(data.total) +
+                "</span>" +
+                "</div>" +
+
+                "</div>";
+
+        }
+
+
+        proposalModal.classList.remove(
+            "hidden"
+        );
+
+        proposalModal.classList.add(
+            "flex"
+        );
+
+        document.body.style.overflow =
+            "hidden";
 
     }
 
@@ -3422,8 +3393,17 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        proposalModal.classList.add("hidden");
-        proposalModal.classList.remove("flex");
+
+        proposalModal.classList.add(
+            "hidden"
+        );
+
+        proposalModal.classList.remove(
+            "flex"
+        );
+
+        document.body.style.overflow =
+            "";
 
     }
 
@@ -3457,7 +3437,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (
                     event.target === proposalModal
                 ) {
+
                     closeProposalModal();
+
                 }
 
             }
@@ -3466,9 +3448,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================================
-       PROPOSAL EMAIL
-    ========================================================== */
+    /* ========================================================
+       PROPOSAL FORM
+    ======================================================== */
+
+    const proposalForm =
+        document.getElementById("proposal-form");
+
 
     if (proposalForm) {
 
@@ -3479,11 +3465,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault();
 
 
+                const data =
+                    calculateEstimate();
+
+
+                if (!data) {
+                    return;
+                }
+
+
                 const name =
                     document
                         .getElementById("proposal-name")
                         .value
                         .trim();
+
 
                 const email =
                     document
@@ -3491,76 +3487,80 @@ document.addEventListener("DOMContentLoaded", function () {
                         .value
                         .trim();
 
-                const notes =
+
+                const company =
                     document
-                        .getElementById("proposal-notes")
+                        .getElementById("proposal-company")
                         .value
                         .trim();
 
 
-                if (!name) {
-
-                    alert(
-                        "Please enter your name."
-                    );
-
-                    return;
-
-                }
+                const requirements =
+                    document
+                        .getElementById("proposal-requirements")
+                        .value
+                        .trim();
 
 
-                if (!isValidEmail(email)) {
-
-                    alert(
-                        "Please enter a valid email address."
-                    );
-
-                    return;
-
-                }
+                const serviceName =
+                    serviceSelect.options[
+                        serviceSelect.selectedIndex
+                    ].text;
 
 
                 const subject =
                     "NexisTech Proposal Request - " +
-                    currentEstimate.serviceName;
+                    serviceName;
 
 
-                const body = [
-                    "Hello NexisTech,",
-                    "",
-                    "I would like to request a proposal.",
-                    "",
-                    "Name: " + name,
-                    "Email: " + email,
-                    "",
+                const body =
+
+                    "NexisTech Proposal Request" +
+                    "\n\n" +
+
+                    "Name: " +
+                    name +
+                    "\n" +
+
+                    "Email: " +
+                    email +
+                    "\n" +
+
+                    "Company / Organization: " +
+                    (company || "Not provided") +
+                    "\n\n" +
+
                     "Service: " +
-                        currentEstimate.serviceName,
-                    "Scope: " +
-                        currentEstimate.scope,
-                    "Indicative Estimate: $" +
-                        currentEstimate.total.toLocaleString(
-                            "en-US"
-                        ),
-                    "",
-                    "Project Notes:",
-                    notes || "(No additional notes provided.)",
-                    "",
-                    "Please contact me to discuss the requirements.",
-                    "",
-                    "Thank you."
-                ].join("\n");
+                    serviceName +
+                    "\n" +
+
+                    "Scope multiplier: ×" +
+                    data.multiplier.toFixed(2) +
+                    "\n" +
+
+                    "Add-ons: " +
+                    formatCurrency(data.addons) +
+                    "\n" +
+
+                    "Preliminary estimate: " +
+                    formatCurrency(data.total) +
+                    "\n\n" +
+
+                    "Project requirements:" +
+                    "\n" +
+                    requirements +
+                    "\n\n" +
+
+                    "This request was generated through the NexisTech website. The estimate is preliminary and subject to confirmed requirements and scope.";
 
 
                 window.location.href =
                     "mailto:" +
-                    CONFIG.contactEmail +
+                    EMAIL +
                     "?subject=" +
                     encodeURIComponent(subject) +
                     "&body=" +
                     encodeURIComponent(body);
-
-
-                closeProposalModal();
 
             }
         );
@@ -3568,12 +3568,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================================
+    /* ========================================================
        CONTACT FORM
-    ========================================================== */
+    ======================================================== */
 
     const contactForm =
         document.getElementById("contact-form");
+
 
     if (contactForm) {
 
@@ -3590,11 +3591,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         .value
                         .trim();
 
+
                 const email =
                     document
                         .getElementById("contact-email")
                         .value
                         .trim();
+
 
                 const message =
                     document
@@ -3603,55 +3606,28 @@ document.addEventListener("DOMContentLoaded", function () {
                         .trim();
 
 
-                if (!name) {
-
-                    alert(
-                        "Please enter your name."
-                    );
-
-                    return;
-
-                }
-
-
-                if (!isValidEmail(email)) {
-
-                    alert(
-                        "Please enter a valid email address."
-                    );
-
-                    return;
-
-                }
-
-
-                if (!message) {
-
-                    alert(
-                        "Please enter your message."
-                    );
-
-                    return;
-
-                }
-
-
                 const subject =
-                    "NexisTech Website Enquiry";
+                    "NexisTech Website Inquiry";
 
 
-                const body = [
-                    "Name: " + name,
-                    "Email: " + email,
-                    "",
-                    "Message:",
-                    message
-                ].join("\n");
+                const body =
+
+                    "Name: " +
+                    name +
+                    "\n" +
+
+                    "Email: " +
+                    email +
+                    "\n\n" +
+
+                    "Message:" +
+                    "\n" +
+                    message;
 
 
                 window.location.href =
                     "mailto:" +
-                    CONFIG.contactEmail +
+                    EMAIL +
                     "?subject=" +
                     encodeURIComponent(subject) +
                     "&body=" +
@@ -3663,198 +3639,244 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================================
-       PAYPAL DONATE
-    ========================================================== */
+    /* ========================================================
+       FAQ
+    ======================================================== */
 
-    const paypalContainer =
-        document.getElementById(
-            "paypal-donate-button-container"
-        );
+    document
+        .querySelectorAll(".faq-question")
+        .forEach(function (question) {
 
-    const paypalStatus =
-        document.getElementById(
-            "paypal-status"
-        );
+            question.addEventListener(
+                "click",
+                function () {
 
-    const paypalThankYou =
-        document.getElementById(
-            "paypal-thankyou"
-        );
+                    const item =
+                        question.closest(
+                            ".faq-item"
+                        );
 
+                    const answer =
+                        item.querySelector(
+                            ".faq-answer"
+                        );
 
-    function showPaypalFallbackStatus() {
-
-        if (paypalStatus) {
-
-            paypalStatus.textContent =
-                "Use the direct PayPal donation page below.";
-
-        }
-
-    }
+                    const icon =
+                        item.querySelector(
+                            ".faq-icon"
+                        );
 
 
-    function initializePayPalDonation() {
-
-        if (!paypalContainer) {
-            return;
-        }
-
-
-        /*
-         * PayPal's Donate SDK exposes PayPal.Donation.
-         */
-        if (
-            typeof window.PayPal === "undefined" ||
-            typeof window.PayPal.Donation === "undefined" ||
-            typeof window.PayPal.Donation.Button !== "function"
-        ) {
-
-            showPaypalFallbackStatus();
-
-            return;
-
-        }
-
-
-        try {
-
-            window.PayPal.Donation.Button({
-
-                env: "production",
-
-                hosted_button_id:
-                    CONFIG.paypalHostedButtonId,
-
-                image: {
-
-                    src:
-                        "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
-
-                    title:
-                        "PayPal - The safer, easier way to pay online!",
-
-                    alt:
-                        "Donate with PayPal button"
-
-                },
-
-                onComplete: function (params) {
-
-                    if (paypalThankYou) {
-
-                        paypalThankYou.classList.remove(
+                    const isOpen =
+                        !answer.classList.contains(
                             "hidden"
+                        );
+
+
+                    document
+                        .querySelectorAll(
+                            ".faq-answer"
+                        )
+                        .forEach(function (element) {
+
+                            element.classList.add(
+                                "hidden"
+                            );
+
+                            element.classList.remove(
+                                "opacity-100"
+                            );
+
+                            element.classList.add(
+                                "opacity-0"
+                            );
+
+                            element.style.maxHeight =
+                                "0px";
+
+                        });
+
+
+                    document
+                        .querySelectorAll(
+                            ".faq-icon"
+                        )
+                        .forEach(function (element) {
+
+                            element.setAttribute(
+                                "data-lucide",
+                                "plus"
+                            );
+
+                        });
+
+
+                    if (!isOpen) {
+
+                        answer.classList.remove(
+                            "hidden"
+                        );
+
+                        requestAnimationFrame(
+                            function () {
+
+                                answer.style.maxHeight =
+                                    answer.scrollHeight +
+                                    "px";
+
+                                answer.classList.remove(
+                                    "opacity-0"
+                                );
+
+                                answer.classList.add(
+                                    "opacity-100"
+                                );
+
+                            }
+                        );
+
+
+                        if (icon) {
+
+                            icon.setAttribute(
+                                "data-lucide",
+                                "minus"
+                            );
+
+                        }
+
+                    }
+
+
+                    initializeIcons();
+
+                }
+            );
+
+        });
+
+
+    /* ========================================================
+       TERMS COLLAPSIBLE
+    ======================================================== */
+
+    const termsToggle =
+        document.getElementById("terms-toggle");
+
+    const termsContent =
+        document.getElementById("terms-content");
+
+    const termsIcon =
+        document.getElementById("terms-icon");
+
+
+    if (termsToggle && termsContent) {
+
+        termsToggle.addEventListener(
+            "click",
+            function () {
+
+                const isClosed =
+                    termsContent.classList.contains(
+                        "hidden"
+                    );
+
+
+                if (isClosed) {
+
+                    termsContent.classList.remove(
+                        "hidden"
+                    );
+
+                    requestAnimationFrame(
+                        function () {
+
+                            termsContent.style.maxHeight =
+                                termsContent.scrollHeight +
+                                "px";
+
+                            termsContent.classList.remove(
+                                "opacity-0"
+                            );
+
+                            termsContent.classList.add(
+                                "opacity-100"
+                            );
+
+                        }
+                    );
+
+
+                    termsToggle.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+
+                    if (termsIcon) {
+
+                        termsIcon.setAttribute(
+                            "data-lucide",
+                            "chevron-up"
                         );
 
                     }
 
+                } else {
 
-                    if (paypalStatus) {
+                    termsContent.style.maxHeight =
+                        "0px";
 
-                        paypalStatus.textContent =
-                            "Donation completed through PayPal.";
+                    termsContent.classList.remove(
+                        "opacity-100"
+                    );
+
+                    termsContent.classList.add(
+                        "opacity-0"
+                    );
+
+
+                    setTimeout(
+                        function () {
+
+                            termsContent.classList.add(
+                                "hidden"
+                            );
+
+                        },
+                        350
+                    );
+
+
+                    termsToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    if (termsIcon) {
+
+                        termsIcon.setAttribute(
+                            "data-lucide",
+                            "chevron-down"
+                        );
 
                     }
 
-
-                    console.log(
-                        "PayPal donation completed.",
-                        params
-                    );
-
                 }
 
-            }).render(
-                "#paypal-donate-button-container"
-            );
 
-
-            if (paypalStatus) {
-
-                paypalStatus.textContent =
-                    "PayPal donation button ready.";
+                initializeIcons();
 
             }
-
-        } catch (error) {
-
-            console.error(
-                "PayPal Donate SDK initialization failed:",
-                error
-            );
-
-            /*
-             * Important:
-             * We DO NOT remove the direct PayPal link.
-             */
-            showPaypalFallbackStatus();
-
-        }
-
-    }
-
-
-    /*
-     * The SDK is loaded synchronously in this document,
-     * but we still wait until DOMContentLoaded so the container
-     * definitely exists.
-     */
-    initializePayPalDonation();
-
-
-    /* =========================================================
-       DIRECT PAYPAL LINK SAFETY
-    ========================================================== */
-
-    const paypalDirectLink =
-        document.getElementById(
-            "paypal-direct-link"
         );
 
-    if (paypalDirectLink) {
-
-        paypalDirectLink.href =
-            CONFIG.paypalDonationUrl;
-
     }
 
 
-    /* =========================================================
-       CONTACT EMAIL CONFIGURATION
-    ========================================================== */
-
-    const contactEmailDisplay =
-        document.getElementById(
-            "contact-email-display"
-        );
-
-    if (contactEmailDisplay) {
-
-        contactEmailDisplay.textContent =
-            CONFIG.contactEmail;
-
-    }
-
-
-    const emailLink =
-        document.getElementById(
-            "email-link"
-        );
-
-    if (emailLink) {
-
-        emailLink.href =
-            "mailto:" +
-            CONFIG.contactEmail;
-
-    }
-
-
-    /* =========================================================
-       KEYBOARD / MODAL ACCESSIBILITY
-    ========================================================== */
+    /* ========================================================
+       ESCAPE KEY
+    ======================================================== */
 
     document.addEventListener(
         "keydown",
@@ -3866,38 +3888,266 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             closeServiceModal();
+
             closeProposalModal();
 
         }
     );
 
 
-    /* =========================================================
-       HELPER FUNCTIONS
-    ========================================================== */
+    /* ========================================================
+       PAYPAL
+    ======================================================== */
 
-    function isValidEmail(email) {
+    const paypalContainer =
+        document.getElementById(
+            "paypal-donate-button-container"
+        );
 
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-            email
+
+    const paypalStatus =
+        document.getElementById(
+            "paypal-status"
+        );
+
+
+    const paypalDirectLink =
+        document.getElementById(
+            "paypal-direct-link"
+        );
+
+
+    const paypalThankYou =
+        document.getElementById(
+            "paypal-thankyou"
+        );
+
+
+    let paypalInitialized =
+        false;
+
+
+    /*
+     * Always configure the direct link.
+     */
+    if (paypalDirectLink) {
+
+        paypalDirectLink.href =
+            PAYPAL_URL;
+
+    }
+
+
+    function updatePayPalStatus(message) {
+
+        if (paypalStatus) {
+
+            paypalStatus.textContent =
+                message;
+
+        }
+
+    }
+
+
+    function initializePayPalDonation() {
+
+        /*
+         * Prevent duplicate rendering.
+         */
+        if (paypalInitialized) {
+            return;
+        }
+
+
+        if (!paypalContainer) {
+
+            console.warn(
+                "PayPal donation container not found."
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * Verify the SDK loaded.
+         */
+        if (
+
+            typeof window.PayPal ===
+                "undefined" ||
+
+            !window.PayPal.Donation ||
+
+            typeof
+                window.PayPal.Donation.Button !==
+                "function"
+
+        ) {
+
+            updatePayPalStatus(
+                "PayPal button could not load. Use the secure PayPal donation page below."
+            );
+
+            return;
+
+        }
+
+
+        try {
+
+            /*
+             * Clear any accidental existing children
+             * before rendering.
+             */
+            paypalContainer.innerHTML =
+                "";
+
+
+            window.PayPal.Donation.Button({
+
+                env: "production",
+
+                hosted_button_id:
+                    PAYPAL_ID,
+
+                image: {
+
+                    src:
+                        "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
+
+                    title:
+                        "PayPal - The safer, easier way to pay online!",
+
+                    alt:
+                        "Donate with PayPal"
+
+                },
+
+
+                onComplete:
+                    function (params) {
+
+                        if (paypalThankYou) {
+
+                            paypalThankYou.classList.remove(
+                                "hidden"
+                            );
+
+                        }
+
+
+                        updatePayPalStatus(
+                            "Your PayPal donation was completed successfully."
+                        );
+
+
+                        console.log(
+                            "PayPal donation completed.",
+                            params
+                        );
+
+                    }
+
+            }).render(
+                "#paypal-donate-button-container"
+            );
+
+
+            paypalInitialized =
+                true;
+
+
+            updatePayPalStatus(
+                "PayPal donation button ready."
+            );
+
+        } catch (error) {
+
+            console.error(
+                "PayPal Donate SDK initialization failed:",
+                error
+            );
+
+
+            paypalInitialized =
+                false;
+
+
+            updatePayPalStatus(
+                "PayPal button could not load. Use the secure PayPal donation page below."
+            );
+
+        }
+
+    }
+
+
+    /*
+     * The PayPal SDK is external. It may not be ready
+     * at DOMContentLoaded.
+     */
+    function startPayPal() {
+
+        if (
+
+            typeof window.PayPal !==
+                "undefined" &&
+
+            window.PayPal.Donation &&
+
+            typeof
+                window.PayPal.Donation.Button ===
+                "function"
+
+        ) {
+
+            initializePayPalDonation();
+
+            return;
+
+        }
+
+
+        /*
+         * Wait for the complete page load.
+         */
+        window.addEventListener(
+            "load",
+            initializePayPalDonation,
+            {
+                once: true
+            }
+        );
+
+
+        /*
+         * Retry after a short delay for slower
+         * connections.
+         */
+        setTimeout(
+            initializePayPalDonation,
+            3000
         );
 
     }
 
 
-    function escapeHtml(value) {
+    startPayPal();
 
-        return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
 
-    }
+    /* ========================================================
+       INITIAL ICON RENDER
+    ======================================================== */
 
-});
+    initializeIcons();
+
+})();
+
 </script>
+
 
 </body>
 </html>
